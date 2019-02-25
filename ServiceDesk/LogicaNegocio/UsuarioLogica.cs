@@ -30,12 +30,16 @@ namespace LogicaNegocio
                 {
                     if (usuario.Contrasena == contrasena)
                     {
-                        return 0;
+                        if (usuario.Estado == "A")
+                        {
+                            return 0;
+                        }
+                        return 1;
                     }
-                    return 1;
+                    return 2;
                 }
             }
-            return 2;
+            return 3;
         }
 
     }

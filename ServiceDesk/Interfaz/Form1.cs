@@ -29,13 +29,18 @@ namespace Interfaz
                     this.Close();
                     break;
                 case 1:
-                    MessageBox.Show("Contraseña Incorrecta", "Login", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Usuario Inactivo", "Login", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtNombreUsuario.Text = "";
                     txtContrasena.Text = "";
                     break;
                 case 2:
-                    MessageBox.Show("Usuario no existe", "Login", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                    txtNombreUsuario.Text = "";
+                    MessageBox.Show("Contraseña incorrecta", "Login", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     txtContrasena.Text = "";
+                    break;
+                case 3:
+                    MessageBox.Show("Usuario no existe", "Login", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    txtContrasena.Text = "";
+                    txtNombreUsuario.Text = "";
                     break;
 
             }
