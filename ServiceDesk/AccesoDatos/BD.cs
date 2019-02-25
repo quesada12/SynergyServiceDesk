@@ -50,18 +50,6 @@ namespace AccesoDatos
             }
         }
 
-        public static void EliminarUsuario(String nombre_usuario)
-        {
-            string sql = "delete from [SistemaTickets].[dbo].[usuario] where nombreusuario = @nombreusuario";
-            using (SqlConnection conn = new SqlConnection(connString))
-            {
-                var rows = conn.Execute(sql, new
-                {
-                    nombreusuario = nombre_usuario
-                });
-            }
-        }
-
         public static void InactivarUsuario(Usuario usuario)
         {
             string sql = "update [SistemaTickets].[dbo].[usuario] set estado = @estado where nombreusuario = @nombreusuario";
@@ -84,6 +72,31 @@ namespace AccesoDatos
                 {
                     nombreusuario = usuario.NombreUsuario,
                     estado = "A"
+                });
+            }
+        }
+
+        //METODOS DE CONEXION TABLA DEPARTAMENTO 
+
+        public static List<Departamento> ObtenerDepartamentos()
+        {
+            List<Departamento> departamentos;
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                departamentos = conn.Query<Departamento>("select * from [SistemaTickets].[dbo].[departamento]").ToList();
+            }
+            return departamentos;
+        }
+
+        public static void CrearDepartamento(Departamento departamento)
+        {
+            string sql = "insert into [SistemaTickets].[dbo].[departamento] ([nombre_departamento], [descripcion] ) VALUES (@nombre_departamento, @descripcion)";
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                var rows = conn.Execute(sql, new
+                {
+                    departamento.Nombre_departamento,
+                    departamento.Descripcion
                 });
             }
         }
