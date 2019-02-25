@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LogicaNegocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,29 @@ namespace Interfaz
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            UsuarioLogica logica = new UsuarioLogica();
+            int r=logica.Login(txtNombreUsuario.Text, txtContrasena.Text);
+            switch (r)
+            {
+                case 0:
+                    MessageBox.Show("Ingreso Correcto","Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                    break;
+                case 1:
+                    MessageBox.Show("Contraseña Incorrecta", "Login", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtContrasena.Text = "";
+                    break;
+                case 2:
+                    MessageBox.Show("Usuario no existe", "Login", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    txtNombreUsuario.Text = "";
+                    txtContrasena.Text = "";
+                    break;
+
+            }
         }
     }
 }
