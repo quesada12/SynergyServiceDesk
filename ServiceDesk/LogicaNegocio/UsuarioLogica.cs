@@ -22,7 +22,7 @@ namespace LogicaNegocio
             usuarios = BD.ObtenerUsuarios();
         }
 
-        public int Login(string nombreusuario, string contrasena)
+        public Usuario Login(string nombreusuario, string contrasena)
         {
             foreach (var usuario in usuarios)
             {
@@ -30,17 +30,15 @@ namespace LogicaNegocio
                 {
                     if (usuario.Contrasena == contrasena)
                     {
-                        if (usuario.Estado == "A")
-                        {
-                            return 0;
-                        }
-                        return 1;
+                        return usuario;
                     }
-                    return 2;
+                    return null;
                 }
             }
-            return 3;
+            return null;
         }
+
+
 
     }
 }
