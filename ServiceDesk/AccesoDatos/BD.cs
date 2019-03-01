@@ -12,10 +12,10 @@ namespace AccesoDatos
     public class BD
     {
         //STRING DE CONEXION PARA PC DE JOSUE
-        static string connString = "Data Source=MSI\\JOSUE_SRV;Initial Catalog=SistemaTickets;Integrated Security=True;";
+        //static string connString = "Data Source=MSI\\JOSUE_SRV;Initial Catalog=SistemaTickets;Integrated Security=True;";
 
         //STRING DE CONEXION PARA PC DE XXXXXX
-        //static string connString = "Data Source=NombreServidor;Initial Catalog=SistemaTickets;Integrated Security=True;";
+        static string connString = "Data Source=ADRIAN\\MSSQLSRVER;Initial Catalog=SistemaTickets;Integrated Security=True;";
 
 
         //METODOS DE CONEXION TABLA USUARIO
