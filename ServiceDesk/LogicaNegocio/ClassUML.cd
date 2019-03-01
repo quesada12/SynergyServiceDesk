@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="LogicaNegocio.Tiquete">
+    <Position X="1.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAADABAAAAAAICAAQAAAAAAEgBAAAAAAAIEAAAAAgA=</HashCode>
+      <FileName>Tiquete.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Usuario" />
+      <Property Name="Tipo_Tiquete" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="LogicaNegocio.Usuario">
+    <Position X="4.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAADAAAAAQAAECEAAACAAAAAAAAAACAAAAAAACAAgI=</HashCode>
+      <FileName>Usuario.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Departamento" />
+      <Property Name="Tipo_Usuario" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="LogicaNegocio.Departamento">
+    <Position X="8" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAEAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Departamento.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LogicaNegocio.Tipo_Tiquete">
+    <Position X="1.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Tipo_Tiquete.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LogicaNegocio.Tipo_Usuario">
+    <Position X="4.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Tipo_Tiquete.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
