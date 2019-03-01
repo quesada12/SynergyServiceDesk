@@ -32,7 +32,7 @@ namespace AccesoDatos
 
         public static void CrearUsuario(Usuario usuario)
         {
-            string sql = "insert into [SistemaTickets].[dbo].[usuario] ([nombre], [apellidos], [correo] , [telefono] , [tipo_usuario] , [departamento],[nombreusuario],[contrasena],[estado] ) VALUES (@nombre, @apellido, @correo,@telefono,@tipo_usuario,@departamento,@nombreusuario,@contrasena,@estado)";
+            string sql = "insert into [SistemaTickets].[dbo].[usuario] ([nombre], [apellidos], [correo] , [telefono] , [tipo_usuario] , [departamento],[nombreusuario],[contrasena],[estado] ) VALUES (@nombre, @apellidos, @correo,@telefono,@tipo_usuario,@departamento,@nombreusuario,@contrasena,@estado)";
             using (SqlConnection conn = new SqlConnection(connString))
             {
                 var rows = conn.Execute(sql, new
@@ -52,12 +52,13 @@ namespace AccesoDatos
 
         public static void InactivarUsuario(Usuario usuario)
         {
-            string sql = "update [SistemaTickets].[dbo].[usuario] set estado = @estado where nombreusuario = @nombreusuario";
+            string sql = "update [SistemaTickets].[dbo].[usuario] set estado = @estado where nombre = @nombre and apellidos=@apellidos";
             using (SqlConnection conn = new SqlConnection(connString))
             {
                 var rows = conn.Execute(sql, new
                 {
-                    nombreusuario = usuario.NombreUsuario,
+                    nombre=usuario.Nombre,
+                    apellidos=usuario.Apellidos,
                     estado = "I"
                 });
             }
@@ -65,12 +66,13 @@ namespace AccesoDatos
 
         public static void ActivarUsuario(Usuario usuario)
         {
-            string sql = "update [SistemaTickets].[dbo].[usuario] set estado = @estado where nombreusuario = @nombreusuario";
+            string sql = "update [SistemaTickets].[dbo].[usuario] set estado = @estado where nombre = @nombre and apellidos=@apellidos";
             using (SqlConnection conn = new SqlConnection(connString))
             {
                 var rows = conn.Execute(sql, new
                 {
-                    nombreusuario = usuario.NombreUsuario,
+                    nombre = usuario.Nombre,
+                    apellidos = usuario.Apellidos,
                     estado = "A"
                 });
             }

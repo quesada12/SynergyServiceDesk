@@ -22,7 +22,7 @@ namespace LogicaNegocio
             usuarios = BD.ObtenerUsuarios();
         }
 
-        public int Login(string nombreusuario, string contrasena)
+        public Usuario Login(string nombreusuario, string contrasena)
         {
             foreach (var usuario in usuarios)
             {
@@ -30,16 +30,61 @@ namespace LogicaNegocio
                 {
                     if (usuario.Contrasena == contrasena)
                     {
-                        if (usuario.Estado == "A")
-                        {
-                            return 0;
-                        }
-                        return 1;
+                        return usuario;
                     }
-                    return 2;
+                    return null;
                 }
             }
-            return 3;
+            return null;
+        }
+
+        public Usuario CrearUsuario(string nombre, string apellidos, string correo, string telefono, string tipo, string departamento, string usuario, string contrasena)
+        {
+            foreach (var u in usuarios)
+            {
+                if (!u.Tipo_usuario.Equals("Cliente"))
+                {
+                    if (u.NombreUsuario.Equals(usuario))
+                    {
+                        return null;
+                    }
+                }
+                if (u.Correo.Equals(correo))
+                {
+                    return null;
+                }
+            }
+            Usuario nuevo = new Usuario() {Nombre=nombre,Apellidos=apellidos,Correo=correo,Telefono=telefono,Tipo_usuario=tipo, Departamento=departamento, NombreUsuario=usuario, Contrasena=contrasena,Estado="A" };
+            BD.CrearUsuario(nuevo);
+            this.ActualizarLista();
+            return nuevo;
+        }
+
+        public Usuario CrearUsuarioCliente(string nombre, string apellidos, string correo, string telefono, string tipo, string departamento)
+        {
+            foreach (var u in usuarios)
+            {
+                if (u.Correo.Equals(correo))
+                {
+                    return null;
+                }
+            }
+            Usuario nuevo = new Usuario() { Nombre = nombre, Apellidos = apellidos, Correo = correo, Telefono = telefono, Tipo_usuario = tipo, Departamento = departamento,Estado="A" };
+            BD.CrearUsuario(nuevo);
+            this.ActualizarLista();
+            return nuevo;
+        }
+
+        public Usuario BuscarUsuario(string nombre, string apellidos)
+        {
+            foreach (var u in usuarios)
+            {
+                if(u.Nombre.Equals(nombre) && u.Apellidos.Equals(apellidos))
+                {
+                    return u;
+                }
+            }
+            return null;
         }
 
     }
