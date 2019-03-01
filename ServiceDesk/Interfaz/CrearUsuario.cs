@@ -28,8 +28,8 @@ namespace Interfaz
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            AdminMenu menu = new AdminMenu(usuario);
-            menu.Show();
+            //AdminMenu menu = new AdminMenu(usuario);
+            //menu.Show();
             this.Close();
         }
 
@@ -79,8 +79,8 @@ namespace Interfaz
                                 else
                                 {
                                     MessageBox.Show("EL usuario " + nuevo.Nombre + " " + nuevo.Apellidos+" fue creado", "Usuario creado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                                    AdminMenu menu = new AdminMenu(usuario);
-                                    menu.Show();
+                                    //AdminMenu menu = new AdminMenu(usuario);
+                                    //menu.Show();
                                     this.Close();
                                 }
                             }
@@ -94,8 +94,8 @@ namespace Interfaz
                                 else
                                 {
                                     MessageBox.Show("EL usuario " + nuevo.Nombre + " " + nuevo.Apellidos+" fue creado", "Usuario creado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                                    AdminMenu menu = new AdminMenu(usuario);
-                                    menu.Show();
+                                    //AdminMenu menu = new AdminMenu(usuario);
+                                    //menu.Show();
                                     this.Close();
                                 }
                             }
@@ -115,8 +115,8 @@ namespace Interfaz
                         else
                         {
                             MessageBox.Show("EL usuario " + nuevo.Nombre + " " + nuevo.Apellidos + " fue creado", "Usuario creado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                            AdminMenu menu = new AdminMenu(usuario);
-                            menu.Show();
+                            //AdminMenu menu = new AdminMenu(usuario);
+                            //menu.Show();
                             this.Close();
                         }
                     }

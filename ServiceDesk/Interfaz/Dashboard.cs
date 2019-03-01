@@ -4,62 +4,61 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.XtraEditors;
 
 namespace Interfaz
 {
-    public partial class AdminMenu : Form
+    public partial class Dashboard : DevExpress.XtraEditors.XtraForm
     {
         Usuario usuario;
-
-        public AdminMenu(Usuario usuario)
+        public Dashboard()
         {
             InitializeComponent();
             this.usuario = usuario;
         }
 
-
-        private void AdminMenu_Load(object sender, EventArgs e)
+        private void Dashboard_Load(object sender, EventArgs e)
         {
-            //lblUsuario.Text = usuario.NombreUsuario;
+            label8.Text = usuario.NombreUsuario;
         }
 
-        private void btnSalir_Click(object sender, EventArgs e)
+        private void tileBar_SelectedItemChanged(object sender, TileItemEventArgs e)
         {
-            Login login = new Login();
-            login.Show();
-            this.Close();
-        }
-
-        private void btnDepartamento_Click(object sender, EventArgs e)
-        {
-            CrearDepartamento nuevo = new CrearDepartamento(usuario);
-            nuevo.Show();
-            this.Close();
+            navigationFrame.SelectedPageIndex = tileBarGroupTables.Items.IndexOf(e.Item);
         }
 
         private void btnUsuario_Click(object sender, EventArgs e)
         {
             CrearUsuario nuevo = new CrearUsuario(usuario);
             nuevo.Show();
-            this.Close();
         }
 
         private void btnActivar_Click(object sender, EventArgs e)
         {
             ActivarUsuario activar = new ActivarUsuario(usuario);
             activar.Show();
-            this.Close();
         }
 
         private void btnInactivar_Click(object sender, EventArgs e)
         {
             InactivarUsuario inactivar = new InactivarUsuario(usuario);
             inactivar.Show();
-            this.Close();
+        }
+
+        private void btnCreaTicket_Click(object sender, EventArgs e)
+        {
+            CreaTickets crear = new CreaTickets();
+            crear.Show();
+        }
+
+        private void btnCreaDpt_Click(object sender, EventArgs e)
+        {
+            CrearDepartamento dpt = new CrearDepartamento(usuario);
+            dpt.Show();
         }
     }
 }

@@ -102,5 +102,19 @@ namespace AccesoDatos
                 });
             }
         }
+
+        public static void CrearTicket(Departamento departamento)
+        {
+            string sql = "insert into [SistemaTickets].[dbo].[ticket] ([nombre_ticket], [comentarios], [fecha_creacion], [fecha_estimada], [fecha_cierre], [usuario_solicita], [usuario_atiende], [prioridad] ) VALUES (@nombre_departamento, @descripcion)";
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                var rows = conn.Execute(sql, new
+                {
+                    departamento.Nombre_departamento,
+                    departamento.Descripcion
+                });
+            }
+        }
+
     }
 }

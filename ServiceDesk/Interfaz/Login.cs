@@ -32,7 +32,9 @@ namespace Interfaz
             else if (actual.Estado.Equals("A"))
             {
                 MessageBox.Show("Ingreso Correcto", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                AdminMenu menu = new AdminMenu(actual);
+                //AdminMenu menu = new AdminMenu(actual);
+                //menu.Show();
+                Dashboard menu = new Dashboard();
                 menu.Show();
                 this.Close();
             }

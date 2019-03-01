@@ -98,6 +98,18 @@
     <Compile Include="CrearUsuario.Designer.cs">
       <DependentUpon>CrearUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="CreaTickets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreaTickets.Designer.cs">
+      <DependentUpon>CreaTickets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="InactivarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +135,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CrearUsuario.resx">
       <DependentUpon>CrearUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreaTickets.resx">
+      <DependentUpon>CreaTickets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InactivarUsuario.resx">
       <DependentUpon>InactivarUsuario.cs</DependentUpon>
