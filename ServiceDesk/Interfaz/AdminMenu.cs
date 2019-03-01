@@ -40,5 +40,26 @@ namespace Interfaz
             nuevo.Show();
             this.Close();
         }
+
+        private void btnUsuario_Click(object sender, EventArgs e)
+        {
+            CrearUsuario nuevo = new CrearUsuario(usuario);
+            nuevo.Show();
+            this.Close();
+        }
+
+        private void btnActivar_Click(object sender, EventArgs e)
+        {
+            ActivarUsuario activar = new ActivarUsuario(usuario);
+            activar.Show();
+            this.Close();
+        }
+
+        private void btnInactivar_Click(object sender, EventArgs e)
+        {
+            InactivarUsuario inactivar = new InactivarUsuario(usuario);
+            inactivar.Show();
+            this.Close();
+        }
     }
 }

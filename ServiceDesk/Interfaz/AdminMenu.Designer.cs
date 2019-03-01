@@ -32,8 +32,9 @@
             this.lblUsuario = new System.Windows.Forms.Label();
             this.btnDepartamento = new System.Windows.Forms.Button();
             this.btnUsuario = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnActivar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.btnInactivar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -72,19 +73,21 @@
             this.btnUsuario.TabIndex = 3;
             this.btnUsuario.Text = "Crear Usuario";
             this.btnUsuario.UseVisualStyleBackColor = true;
+            this.btnUsuario.Click += new System.EventHandler(this.btnUsuario_Click);
             // 
-            // btnModificar
+            // btnActivar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(52, 236);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(226, 74);
-            this.btnModificar.TabIndex = 4;
-            this.btnModificar.Text = "Modificar Usuario";
-            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnActivar.Location = new System.Drawing.Point(52, 236);
+            this.btnActivar.Name = "btnActivar";
+            this.btnActivar.Size = new System.Drawing.Size(226, 74);
+            this.btnActivar.TabIndex = 4;
+            this.btnActivar.Text = "Activar Usuario";
+            this.btnActivar.UseVisualStyleBackColor = true;
+            this.btnActivar.Click += new System.EventHandler(this.btnActivar_Click);
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(188, 342);
+            this.btnSalir.Location = new System.Drawing.Point(188, 437);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(140, 34);
             this.btnSalir.TabIndex = 5;
@@ -92,13 +95,24 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // btnInactivar
+            // 
+            this.btnInactivar.Location = new System.Drawing.Point(52, 326);
+            this.btnInactivar.Name = "btnInactivar";
+            this.btnInactivar.Size = new System.Drawing.Size(226, 74);
+            this.btnInactivar.TabIndex = 6;
+            this.btnInactivar.Text = "Inactivar Usuario";
+            this.btnInactivar.UseVisualStyleBackColor = true;
+            this.btnInactivar.Click += new System.EventHandler(this.btnInactivar_Click);
+            // 
             // AdminMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(340, 393);
+            this.ClientSize = new System.Drawing.Size(340, 483);
+            this.Controls.Add(this.btnInactivar);
             this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.btnModificar);
+            this.Controls.Add(this.btnActivar);
             this.Controls.Add(this.btnUsuario);
             this.Controls.Add(this.btnDepartamento);
             this.Controls.Add(this.lblUsuario);
@@ -117,7 +131,8 @@
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.Button btnDepartamento;
         private System.Windows.Forms.Button btnUsuario;
-        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnActivar;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnInactivar;
     }
 }

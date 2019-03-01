@@ -63,6 +63,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActivarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActivarUsuario.Designer.cs">
+      <DependentUpon>ActivarUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +81,18 @@
     <Compile Include="CrearDepartamento.Designer.cs">
       <DependentUpon>CrearDepartamento.cs</DependentUpon>
     </Compile>
+    <Compile Include="CrearUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearUsuario.Designer.cs">
+      <DependentUpon>CrearUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InactivarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InactivarUsuario.Designer.cs">
+      <DependentUpon>InactivarUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,11 +101,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ActivarUsuario.resx">
+      <DependentUpon>ActivarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminMenu.resx">
       <DependentUpon>AdminMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CrearDepartamento.resx">
       <DependentUpon>CrearDepartamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrearUsuario.resx">
+      <DependentUpon>CrearUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InactivarUsuario.resx">
+      <DependentUpon>InactivarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -116,6 +143,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AccesoDatos\AccesoDatos.csproj">
+      <Project>{A2062DA9-B718-446F-975A-E89E327D75A5}</Project>
+      <Name>AccesoDatos</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Entidades\Entidades.csproj">
       <Project>{5E35C62B-FB27-4B60-A125-F1A0E5AD0528}</Project>
       <Name>Entidades</Name>
