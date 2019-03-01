@@ -103,15 +103,23 @@ namespace AccesoDatos
             }
         }
 
-        public static void CrearTicket(Departamento departamento)
+        public static void CrearTicket(Ticket ticket)
         {
-            string sql = "insert into [SistemaTickets].[dbo].[ticket] ([nombre_ticket], [comentarios], [fecha_creacion], [fecha_estimada], [fecha_cierre], [usuario_solicita], [usuario_atiende], [prioridad] ) VALUES (@nombre_departamento, @descripcion)";
+            string sql = "insert into [SistemaTickets].[dbo].[ticket] ([nombre_ticket], [comentarios], [fecha_creacion], [fecha_estimada], [fecha_cierre], [usuario_solicita], [usuario_atiende],[prioridad],[estado],[tipo_ticket] ) VALUES (@nombre_ticket, @comentarios, @fecha_creacion, @fecha_estimada, @fecha_cierre, @usuario_solicita, @usuario_atiende, @prioridad, @estado, @tipo_ticket)";
             using (SqlConnection conn = new SqlConnection(connString))
             {
                 var rows = conn.Execute(sql, new
                 {
-                    departamento.Nombre_departamento,
-                    departamento.Descripcion
+                    ticket.nombre_ticket,
+                    ticket.comentarios,
+                    ticket.fecha_creacion,
+                    ticket.fecha_estimada,
+                    ticket.fecha_cierre,
+                    ticket.usuario_solicita,
+                    ticket.usuario_atiende,
+                    ticket.prioridad,
+                    ticket.estado,
+                    ticket.tipo_ticket
                 });
             }
         }
