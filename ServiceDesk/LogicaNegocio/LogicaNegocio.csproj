@@ -43,13 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Departamento.cs" />
     <Compile Include="DepartamentoLogica.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Ticketslogica.cs" />
     <Compile Include="Tipo_Tiquete.cs" />
-    <Compile Include="Tiquete.cs" />
-    <Compile Include="Usuario.cs" />
     <Compile Include="UsuarioLogica.cs" />
   </ItemGroup>
   <ItemGroup>

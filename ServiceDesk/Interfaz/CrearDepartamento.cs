@@ -41,8 +41,8 @@ namespace Interfaz
                 else
                 {
                     MessageBox.Show("Departamento " + nuevo.Nombre_departamento + " fue creado", "Departamento", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    AdminMenu menu = new AdminMenu(usuario);
-                    menu.Show();
+                    //AdminMenu menu = new AdminMenu(usuario);
+                    //menu.Show();
                     this.Close();
                 }
             }
