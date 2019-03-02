@@ -103,6 +103,9 @@ namespace AccesoDatos
             }
         }
 
+        //METODOS DE CONEXION TABLA TICKETS
+
+        // INSERT A TABLA TICKET 
         public static void CrearTicket(Ticket ticket)
         {
             string sql = "insert into [SistemaTickets].[dbo].[ticket] ([nombre_ticket], [comentarios], [fecha_creacion], [fecha_estimada], [fecha_cierre], [usuario_solicita], [usuario_atiende],[prioridad],[estado],[tipo_ticket] ) VALUES (@nombre_ticket, @comentarios, @fecha_creacion, @fecha_estimada, @fecha_cierre, @usuario_solicita, @usuario_atiende, @prioridad, @estado, @tipo_ticket)";
@@ -122,6 +125,16 @@ namespace AccesoDatos
                     ticket.tipo_ticket
                 });
             }
+        }
+
+        public static List<Ticket> ObtenerTickets()
+        {
+            List<Ticket> ticket;
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                ticket = conn.Query<Ticket>("select * from [SistemaTickets].[dbo].[ticket]").ToList();
+            }
+            return ticket;
         }
 
     }

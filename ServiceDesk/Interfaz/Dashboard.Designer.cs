@@ -30,44 +30,44 @@
         private void InitializeComponent()
         {
             DevExpress.XtraEditors.TileItemElement tileItemElement1 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement2 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement3 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement4 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement5 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement2 = new DevExpress.XtraEditors.TileItemElement();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.tileBar = new DevExpress.XtraBars.Navigation.TileBar();
             this.tileBarGroupTables = new DevExpress.XtraBars.Navigation.TileBarGroup();
             this.eployeesTileBarItem = new DevExpress.XtraBars.Navigation.TileBarItem();
+            this.tileBarItem3 = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.customersTileBarItem = new DevExpress.XtraBars.Navigation.TileBarItem();
-            this.navigationFrame = new DevExpress.XtraBars.Navigation.NavigationFrame();
-            this.employeesNavigationPage = new DevExpress.XtraBars.Navigation.NavigationPage();
-            this.employeesLabelControl = new DevExpress.XtraEditors.LabelControl();
-            this.customersNavigationPage = new DevExpress.XtraBars.Navigation.NavigationPage();
-            this.customersLabelControl = new DevExpress.XtraEditors.LabelControl();
             this.tileBarItem1 = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.tileBarItem2 = new DevExpress.XtraBars.Navigation.TileBarItem();
-            this.navigationPage1 = new DevExpress.XtraBars.Navigation.NavigationPage();
-            this.tileBarItem3 = new DevExpress.XtraBars.Navigation.TileBarItem();
-            this.navigationPage3 = new DevExpress.XtraBars.Navigation.NavigationPage();
-            this.navigationPage4 = new DevExpress.XtraBars.Navigation.NavigationPage();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.lblUsuario = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.navigationFrame = new DevExpress.XtraBars.Navigation.NavigationFrame();
+            this.employeesNavigationPage = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.btnInactivar = new DevExpress.XtraEditors.SimpleButton();
+            this.btnActivar = new DevExpress.XtraEditors.SimpleButton();
+            this.btnUsuario = new DevExpress.XtraEditors.SimpleButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.employeesLabelControl = new DevExpress.XtraEditors.LabelControl();
+            this.customersNavigationPage = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.btnCreaDpt = new DevExpress.XtraEditors.SimpleButton();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.customersLabelControl = new DevExpress.XtraEditors.LabelControl();
+            this.navigationPage1 = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.btnCreaTicket = new DevExpress.XtraEditors.SimpleButton();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.navigationPage3 = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.btnUsuario = new DevExpress.XtraEditors.SimpleButton();
-            this.btnActivar = new DevExpress.XtraEditors.SimpleButton();
-            this.btnInactivar = new DevExpress.XtraEditors.SimpleButton();
-            this.btnCreaTicket = new DevExpress.XtraEditors.SimpleButton();
-            this.btnCreaDpt = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.navigationPage4 = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.navigationFrame)).BeginInit();
             this.navigationFrame.SuspendLayout();
             this.employeesNavigationPage.SuspendLayout();
@@ -131,6 +131,16 @@
             this.eployeesTileBarItem.Elements.Add(tileItemElement1);
             this.eployeesTileBarItem.Name = "eployeesTileBarItem";
             // 
+            // tileBarItem3
+            // 
+            this.tileBarItem3.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
+            tileItemElement2.ImageUri.Uri = "SendToBack";
+            tileItemElement2.Text = "Departamentos";
+            this.tileBarItem3.Elements.Add(tileItemElement2);
+            this.tileBarItem3.Id = 5;
+            this.tileBarItem3.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
+            this.tileBarItem3.Name = "tileBarItem3";
+            // 
             // customersTileBarItem
             // 
             this.customersTileBarItem.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
@@ -140,6 +150,26 @@
             this.customersTileBarItem.Id = 2;
             this.customersTileBarItem.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.customersTileBarItem.Name = "customersTileBarItem";
+            // 
+            // tileBarItem1
+            // 
+            this.tileBarItem1.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
+            tileItemElement4.ImageUri.Uri = "Open";
+            tileItemElement4.Text = "Tickets Activos";
+            this.tileBarItem1.Elements.Add(tileItemElement4);
+            this.tileBarItem1.Id = 3;
+            this.tileBarItem1.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
+            this.tileBarItem1.Name = "tileBarItem1";
+            // 
+            // tileBarItem2
+            // 
+            this.tileBarItem2.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
+            tileItemElement5.ImageUri.Uri = "Paste";
+            tileItemElement5.Text = "Historico";
+            this.tileBarItem2.Elements.Add(tileItemElement5);
+            this.tileBarItem2.Id = 4;
+            this.tileBarItem2.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
+            this.tileBarItem2.Name = "tileBarItem2";
             // 
             // navigationFrame
             // 
@@ -176,6 +206,68 @@
             this.employeesNavigationPage.Name = "employeesNavigationPage";
             this.employeesNavigationPage.Size = new System.Drawing.Size(853, 451);
             // 
+            // btnInactivar
+            // 
+            this.btnInactivar.Appearance.Font = new System.Drawing.Font("Tahoma", 15.25F);
+            this.btnInactivar.Appearance.Options.UseFont = true;
+            this.btnInactivar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnInactivar.ImageOptions.Image")));
+            this.btnInactivar.Location = new System.Drawing.Point(282, 296);
+            this.btnInactivar.LookAndFeel.SkinName = "Office 2016 Dark";
+            this.btnInactivar.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnInactivar.Name = "btnInactivar";
+            this.btnInactivar.Size = new System.Drawing.Size(280, 85);
+            this.btnInactivar.TabIndex = 7;
+            this.btnInactivar.Text = "Inactivar Usuario";
+            this.btnInactivar.Click += new System.EventHandler(this.btnInactivar_Click);
+            // 
+            // btnActivar
+            // 
+            this.btnActivar.Appearance.Font = new System.Drawing.Font("Tahoma", 15.25F);
+            this.btnActivar.Appearance.Options.UseFont = true;
+            this.btnActivar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnActivar.ImageOptions.Image")));
+            this.btnActivar.Location = new System.Drawing.Point(282, 186);
+            this.btnActivar.LookAndFeel.SkinName = "Office 2016 Dark";
+            this.btnActivar.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnActivar.Name = "btnActivar";
+            this.btnActivar.Size = new System.Drawing.Size(280, 85);
+            this.btnActivar.TabIndex = 6;
+            this.btnActivar.Text = "Activar Usuario";
+            this.btnActivar.Click += new System.EventHandler(this.btnActivar_Click);
+            // 
+            // btnUsuario
+            // 
+            this.btnUsuario.Appearance.Font = new System.Drawing.Font("Tahoma", 15.25F);
+            this.btnUsuario.Appearance.Options.UseFont = true;
+            this.btnUsuario.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnUsuario.ImageOptions.Image")));
+            this.btnUsuario.Location = new System.Drawing.Point(282, 75);
+            this.btnUsuario.LookAndFeel.SkinName = "Office 2016 Dark";
+            this.btnUsuario.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnUsuario.Name = "btnUsuario";
+            this.btnUsuario.Size = new System.Drawing.Size(280, 85);
+            this.btnUsuario.TabIndex = 5;
+            this.btnUsuario.Text = "Crear Usuario";
+            this.btnUsuario.Click += new System.EventHandler(this.btnUsuario_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(52, 5);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "label2";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(2, 5);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(47, 13);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Usuario:";
+            // 
             // employeesLabelControl
             // 
             this.employeesLabelControl.Appearance.Font = new System.Drawing.Font("Tahoma", 25.25F);
@@ -203,168 +295,19 @@
             this.customersNavigationPage.Name = "customersNavigationPage";
             this.customersNavigationPage.Size = new System.Drawing.Size(853, 451);
             // 
-            // customersLabelControl
+            // btnCreaDpt
             // 
-            this.customersLabelControl.Appearance.Font = new System.Drawing.Font("Tahoma", 25.25F);
-            this.customersLabelControl.Appearance.ForeColor = System.Drawing.Color.Gray;
-            this.customersLabelControl.Appearance.Options.UseFont = true;
-            this.customersLabelControl.Appearance.Options.UseForeColor = true;
-            this.customersLabelControl.Appearance.Options.UseTextOptions = true;
-            this.customersLabelControl.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.customersLabelControl.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top;
-            this.customersLabelControl.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.customersLabelControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.customersLabelControl.Location = new System.Drawing.Point(0, 0);
-            this.customersLabelControl.Name = "customersLabelControl";
-            this.customersLabelControl.Size = new System.Drawing.Size(853, 451);
-            this.customersLabelControl.TabIndex = 2;
-            this.customersLabelControl.Text = "Administración de Departamentos";
-            // 
-            // tileBarItem1
-            // 
-            this.tileBarItem1.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement4.ImageUri.Uri = "Open";
-            tileItemElement4.Text = "Tickets Activos";
-            this.tileBarItem1.Elements.Add(tileItemElement4);
-            this.tileBarItem1.Id = 3;
-            this.tileBarItem1.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
-            this.tileBarItem1.Name = "tileBarItem1";
-            // 
-            // tileBarItem2
-            // 
-            this.tileBarItem2.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement5.ImageUri.Uri = "Paste";
-            tileItemElement5.Text = "Historico";
-            this.tileBarItem2.Elements.Add(tileItemElement5);
-            this.tileBarItem2.Id = 4;
-            this.tileBarItem2.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
-            this.tileBarItem2.Name = "tileBarItem2";
-            // 
-            // navigationPage1
-            // 
-            this.navigationPage1.Controls.Add(this.btnCreaTicket);
-            this.navigationPage1.Controls.Add(this.label6);
-            this.navigationPage1.Controls.Add(this.label7);
-            this.navigationPage1.Controls.Add(this.labelControl1);
-            this.navigationPage1.Name = "navigationPage1";
-            this.navigationPage1.Size = new System.Drawing.Size(853, 451);
-            // 
-            // tileBarItem3
-            // 
-            this.tileBarItem3.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement2.ImageUri.Uri = "SendToBack";
-            tileItemElement2.Text = "Departamentos";
-            this.tileBarItem3.Elements.Add(tileItemElement2);
-            this.tileBarItem3.Id = 5;
-            this.tileBarItem3.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
-            this.tileBarItem3.Name = "tileBarItem3";
-            // 
-            // navigationPage3
-            // 
-            this.navigationPage3.Controls.Add(this.label8);
-            this.navigationPage3.Controls.Add(this.label9);
-            this.navigationPage3.Controls.Add(this.labelControl2);
-            this.navigationPage3.Name = "navigationPage3";
-            this.navigationPage3.Size = new System.Drawing.Size(853, 451);
-            // 
-            // navigationPage4
-            // 
-            this.navigationPage4.Controls.Add(this.lblUsuario);
-            this.navigationPage4.Controls.Add(this.label1);
-            this.navigationPage4.Controls.Add(this.labelControl3);
-            this.navigationPage4.Name = "navigationPage4";
-            this.navigationPage4.Size = new System.Drawing.Size(853, 451);
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 25.25F);
-            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Gray;
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Appearance.Options.UseForeColor = true;
-            this.labelControl1.Appearance.Options.UseTextOptions = true;
-            this.labelControl1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.labelControl1.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top;
-            this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelControl1.Location = new System.Drawing.Point(0, 0);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(853, 451);
-            this.labelControl1.TabIndex = 3;
-            this.labelControl1.Text = "Administración de Tickets";
-            // 
-            // labelControl2
-            // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 25.25F);
-            this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Gray;
-            this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Appearance.Options.UseForeColor = true;
-            this.labelControl2.Appearance.Options.UseTextOptions = true;
-            this.labelControl2.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.labelControl2.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top;
-            this.labelControl2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelControl2.Location = new System.Drawing.Point(0, 0);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(853, 451);
-            this.labelControl2.TabIndex = 3;
-            this.labelControl2.Text = "Tickets Activos";
-            // 
-            // labelControl3
-            // 
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 25.25F);
-            this.labelControl3.Appearance.ForeColor = System.Drawing.Color.Gray;
-            this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Appearance.Options.UseForeColor = true;
-            this.labelControl3.Appearance.Options.UseTextOptions = true;
-            this.labelControl3.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.labelControl3.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top;
-            this.labelControl3.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelControl3.Location = new System.Drawing.Point(0, 0);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(853, 451);
-            this.labelControl3.TabIndex = 3;
-            this.labelControl3.Text = "Histórico Tickets";
-            // 
-            // lblUsuario
-            // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(52, 5);
-            this.lblUsuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(35, 13);
-            this.lblUsuario.TabIndex = 5;
-            this.lblUsuario.Text = "label2";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(2, 5);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Usuario:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(52, 5);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "label2";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(2, 5);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Usuario:";
+            this.btnCreaDpt.Appearance.Font = new System.Drawing.Font("Tahoma", 15.25F);
+            this.btnCreaDpt.Appearance.Options.UseFont = true;
+            this.btnCreaDpt.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnCreaDpt.ImageOptions.Image")));
+            this.btnCreaDpt.Location = new System.Drawing.Point(286, 183);
+            this.btnCreaDpt.LookAndFeel.SkinName = "Office 2016 Dark";
+            this.btnCreaDpt.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnCreaDpt.Name = "btnCreaDpt";
+            this.btnCreaDpt.Size = new System.Drawing.Size(280, 85);
+            this.btnCreaDpt.TabIndex = 7;
+            this.btnCreaDpt.Text = "Crear Departamento";
+            this.btnCreaDpt.Click += new System.EventHandler(this.btnCreaDpt_Click);
             // 
             // label4
             // 
@@ -386,6 +329,47 @@
             this.label5.TabIndex = 3;
             this.label5.Text = "Usuario:";
             // 
+            // customersLabelControl
+            // 
+            this.customersLabelControl.Appearance.Font = new System.Drawing.Font("Tahoma", 25.25F);
+            this.customersLabelControl.Appearance.ForeColor = System.Drawing.Color.Gray;
+            this.customersLabelControl.Appearance.Options.UseFont = true;
+            this.customersLabelControl.Appearance.Options.UseForeColor = true;
+            this.customersLabelControl.Appearance.Options.UseTextOptions = true;
+            this.customersLabelControl.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.customersLabelControl.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top;
+            this.customersLabelControl.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.customersLabelControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.customersLabelControl.Location = new System.Drawing.Point(0, 0);
+            this.customersLabelControl.Name = "customersLabelControl";
+            this.customersLabelControl.Size = new System.Drawing.Size(853, 451);
+            this.customersLabelControl.TabIndex = 2;
+            this.customersLabelControl.Text = "Administración de Departamentos";
+            // 
+            // navigationPage1
+            // 
+            this.navigationPage1.Caption = "navigationPage1";
+            this.navigationPage1.Controls.Add(this.btnCreaTicket);
+            this.navigationPage1.Controls.Add(this.label6);
+            this.navigationPage1.Controls.Add(this.label7);
+            this.navigationPage1.Controls.Add(this.labelControl1);
+            this.navigationPage1.Name = "navigationPage1";
+            this.navigationPage1.Size = new System.Drawing.Size(853, 451);
+            // 
+            // btnCreaTicket
+            // 
+            this.btnCreaTicket.Appearance.Font = new System.Drawing.Font("Tahoma", 15.25F);
+            this.btnCreaTicket.Appearance.Options.UseFont = true;
+            this.btnCreaTicket.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnCreaTicket.ImageOptions.Image")));
+            this.btnCreaTicket.Location = new System.Drawing.Point(286, 183);
+            this.btnCreaTicket.LookAndFeel.SkinName = "Office 2016 Dark";
+            this.btnCreaTicket.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnCreaTicket.Name = "btnCreaTicket";
+            this.btnCreaTicket.Size = new System.Drawing.Size(280, 85);
+            this.btnCreaTicket.TabIndex = 6;
+            this.btnCreaTicket.Text = "Crear Ticket";
+            this.btnCreaTicket.Click += new System.EventHandler(this.btnCreaTicket_Click);
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -405,6 +389,32 @@
             this.label7.Size = new System.Drawing.Size(47, 13);
             this.label7.TabIndex = 4;
             this.label7.Text = "Usuario:";
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 25.25F);
+            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Gray;
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Appearance.Options.UseForeColor = true;
+            this.labelControl1.Appearance.Options.UseTextOptions = true;
+            this.labelControl1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.labelControl1.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top;
+            this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelControl1.Location = new System.Drawing.Point(0, 0);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(853, 451);
+            this.labelControl1.TabIndex = 3;
+            this.labelControl1.Text = "Administración de Tickets";
+            // 
+            // navigationPage3
+            // 
+            this.navigationPage3.Caption = "navigationPage3";
+            this.navigationPage3.Controls.Add(this.label8);
+            this.navigationPage3.Controls.Add(this.label9);
+            this.navigationPage3.Controls.Add(this.labelControl2);
+            this.navigationPage3.Name = "navigationPage3";
+            this.navigationPage3.Size = new System.Drawing.Size(853, 451);
             // 
             // label8
             // 
@@ -426,71 +436,68 @@
             this.label9.TabIndex = 4;
             this.label9.Text = "Usuario:";
             // 
-            // btnUsuario
+            // labelControl2
             // 
-            this.btnUsuario.Appearance.Font = new System.Drawing.Font("Tahoma", 15.25F);
-            this.btnUsuario.Appearance.Options.UseFont = true;
-            this.btnUsuario.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnUsuario.ImageOptions.Image")));
-            this.btnUsuario.Location = new System.Drawing.Point(282, 75);
-            this.btnUsuario.LookAndFeel.SkinName = "Office 2016 Dark";
-            this.btnUsuario.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.btnUsuario.Name = "btnUsuario";
-            this.btnUsuario.Size = new System.Drawing.Size(280, 85);
-            this.btnUsuario.TabIndex = 5;
-            this.btnUsuario.Text = "Crear Usuario";
-            this.btnUsuario.Click += new System.EventHandler(this.btnUsuario_Click);
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 25.25F);
+            this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Gray;
+            this.labelControl2.Appearance.Options.UseFont = true;
+            this.labelControl2.Appearance.Options.UseForeColor = true;
+            this.labelControl2.Appearance.Options.UseTextOptions = true;
+            this.labelControl2.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.labelControl2.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top;
+            this.labelControl2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelControl2.Location = new System.Drawing.Point(0, 0);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(853, 451);
+            this.labelControl2.TabIndex = 3;
+            this.labelControl2.Text = "Tickets Activos";
             // 
-            // btnActivar
+            // navigationPage4
             // 
-            this.btnActivar.Appearance.Font = new System.Drawing.Font("Tahoma", 15.25F);
-            this.btnActivar.Appearance.Options.UseFont = true;
-            this.btnActivar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnActivar.ImageOptions.Image")));
-            this.btnActivar.Location = new System.Drawing.Point(282, 186);
-            this.btnActivar.LookAndFeel.SkinName = "Office 2016 Dark";
-            this.btnActivar.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.btnActivar.Name = "btnActivar";
-            this.btnActivar.Size = new System.Drawing.Size(280, 85);
-            this.btnActivar.TabIndex = 6;
-            this.btnActivar.Text = "Activar Usuario";
-            this.btnActivar.Click += new System.EventHandler(this.btnActivar_Click);
+            this.navigationPage4.Caption = "navigationPage4";
+            this.navigationPage4.Controls.Add(this.lblUsuario);
+            this.navigationPage4.Controls.Add(this.label1);
+            this.navigationPage4.Controls.Add(this.labelControl3);
+            this.navigationPage4.Name = "navigationPage4";
+            this.navigationPage4.Size = new System.Drawing.Size(853, 451);
             // 
-            // btnInactivar
+            // lblUsuario
             // 
-            this.btnInactivar.Appearance.Font = new System.Drawing.Font("Tahoma", 15.25F);
-            this.btnInactivar.Appearance.Options.UseFont = true;
-            this.btnInactivar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnInactivar.ImageOptions.Image")));
-            this.btnInactivar.Location = new System.Drawing.Point(282, 296);
-            this.btnInactivar.LookAndFeel.SkinName = "Office 2016 Dark";
-            this.btnInactivar.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.btnInactivar.Name = "btnInactivar";
-            this.btnInactivar.Size = new System.Drawing.Size(280, 85);
-            this.btnInactivar.TabIndex = 7;
-            this.btnInactivar.Text = "Inactivar Usuario";
-            this.btnInactivar.Click += new System.EventHandler(this.btnInactivar_Click);
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Location = new System.Drawing.Point(52, 5);
+            this.lblUsuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(35, 13);
+            this.lblUsuario.TabIndex = 5;
+            this.lblUsuario.Text = "label2";
             // 
-            // btnCreaTicket
+            // label1
             // 
-            this.btnCreaTicket.Location = new System.Drawing.Point(286, 183);
-            this.btnCreaTicket.LookAndFeel.SkinName = "Office 2016 Dark";
-            this.btnCreaTicket.Name = "btnCreaTicket";
-            this.btnCreaTicket.Size = new System.Drawing.Size(280, 85);
-            this.btnCreaTicket.TabIndex = 6;
-            this.btnCreaTicket.Text = "Crear Ticket";
-            this.btnCreaTicket.Click += new System.EventHandler(this.btnCreaTicket_Click);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(2, 5);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(47, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Usuario:";
             // 
-            // btnCreaDpt
+            // labelControl3
             // 
-            this.btnCreaDpt.Appearance.Font = new System.Drawing.Font("Tahoma", 15.25F);
-            this.btnCreaDpt.Appearance.Options.UseFont = true;
-            this.btnCreaDpt.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
-            this.btnCreaDpt.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnCreaDpt.ImageOptions.Image")));
-            this.btnCreaDpt.Location = new System.Drawing.Point(286, 183);
-            this.btnCreaDpt.LookAndFeel.SkinName = "Office 2016 Dark";
-            this.btnCreaDpt.Name = "btnCreaDpt";
-            this.btnCreaDpt.Size = new System.Drawing.Size(280, 85);
-            this.btnCreaDpt.TabIndex = 7;
-            this.btnCreaDpt.Text = "Crear Departamento";
-            this.btnCreaDpt.Click += new System.EventHandler(this.btnCreaDpt_Click);
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 25.25F);
+            this.labelControl3.Appearance.ForeColor = System.Drawing.Color.Gray;
+            this.labelControl3.Appearance.Options.UseFont = true;
+            this.labelControl3.Appearance.Options.UseForeColor = true;
+            this.labelControl3.Appearance.Options.UseTextOptions = true;
+            this.labelControl3.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.labelControl3.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top;
+            this.labelControl3.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelControl3.Location = new System.Drawing.Point(0, 0);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(853, 451);
+            this.labelControl3.TabIndex = 3;
+            this.labelControl3.Text = "Histórico Tickets";
             // 
             // Dashboard
             // 
