@@ -127,6 +127,8 @@ namespace AccesoDatos
             }
         }
 
+        // SELECT  DE TICKETS
+
         public static List<Ticket> ObtenerTickets()
         {
             List<Ticket> ticket;
@@ -135,6 +137,42 @@ namespace AccesoDatos
                 ticket = conn.Query<Ticket>("select * from [SistemaTickets].[dbo].[ticket]").ToList();
             }
             return ticket;
+        }
+
+        // SELECT PARA LA PRIORIDAD DE TICKETS
+
+        public static List<PrioridadTicket> ObtenerPrioridad()
+        {
+            List<PrioridadTicket> prioridad;
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                prioridad = conn.Query<PrioridadTicket>("select * from [SistemaTickets].[dbo].[prioridad]").ToList();
+            }
+            return prioridad;
+        }
+
+        // SELECT PARA EL ESTADO DE TICKETS
+
+        public static List<EstadoTicket> ObtenereSTADO()
+        {
+            List<EstadoTicket> estado;
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                estado = conn.Query<EstadoTicket>("select * from [SistemaTickets].[dbo].[estado]").ToList();
+            }
+            return estado;
+        }
+
+        // SELECT PARA LA CATEGORIA DE TICKETS
+
+        public static List<CategoriaTicket> ObtenerCategoria()
+        {
+            List<CategoriaTicket> categoria;
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                categoria = conn.Query<CategoriaTicket>("select * from [SistemaTickets].[dbo].[tipo_ticket]").ToList();
+            }
+            return categoria;
         }
 
     }

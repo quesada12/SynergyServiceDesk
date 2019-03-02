@@ -49,6 +49,8 @@
             this.txt_nombTicket = new System.Windows.Forms.TextBox();
             this.lbl_nombre = new System.Windows.Forms.Label();
             this.lblCrearTicket = new DevExpress.XtraEditors.LabelControl();
+            this.cmb_prioridad = new System.Windows.Forms.ComboBox();
+            this.lblPrioridad = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // cmb_tecnico
@@ -92,6 +94,7 @@
             this.btn_salir.TabIndex = 40;
             this.btn_salir.Text = "Salir";
             this.btn_salir.UseVisualStyleBackColor = true;
+            this.btn_salir.Click += new System.EventHandler(this.btn_salir_Click);
             // 
             // btn_creaTicket
             // 
@@ -157,6 +160,7 @@
             this.cmb_estado.Name = "cmb_estado";
             this.cmb_estado.Size = new System.Drawing.Size(121, 21);
             this.cmb_estado.TabIndex = 32;
+            this.cmb_estado.SelectedIndexChanged += new System.EventHandler(this.cmb_estado_SelectedIndexChanged);
             // 
             // txt_comentario
             // 
@@ -173,6 +177,7 @@
             this.cmb_categoria.Name = "cmb_categoria";
             this.cmb_categoria.Size = new System.Drawing.Size(121, 21);
             this.cmb_categoria.TabIndex = 30;
+            this.cmb_categoria.SelectedIndexChanged += new System.EventHandler(this.cmb_categoria_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -229,11 +234,31 @@
             this.lblCrearTicket.TabIndex = 45;
             this.lblCrearTicket.Text = "Crear Nuevo Ticket";
             // 
+            // cmb_prioridad
+            // 
+            this.cmb_prioridad.FormattingEnabled = true;
+            this.cmb_prioridad.Location = new System.Drawing.Point(456, 431);
+            this.cmb_prioridad.Name = "cmb_prioridad";
+            this.cmb_prioridad.Size = new System.Drawing.Size(121, 21);
+            this.cmb_prioridad.TabIndex = 47;
+            this.cmb_prioridad.SelectedIndexChanged += new System.EventHandler(this.cmbPrioridad_SelectedIndexChanged);
+            // 
+            // lblPrioridad
+            // 
+            this.lblPrioridad.AutoSize = true;
+            this.lblPrioridad.Location = new System.Drawing.Point(453, 415);
+            this.lblPrioridad.Name = "lblPrioridad";
+            this.lblPrioridad.Size = new System.Drawing.Size(48, 13);
+            this.lblPrioridad.TabIndex = 46;
+            this.lblPrioridad.Text = "Prioridad";
+            // 
             // CreaTickets
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(719, 533);
+            this.Controls.Add(this.cmb_prioridad);
+            this.Controls.Add(this.lblPrioridad);
             this.Controls.Add(this.lblCrearTicket);
             this.Controls.Add(this.cmb_tecnico);
             this.Controls.Add(this.lbltecnico);
@@ -285,5 +310,7 @@
         private System.Windows.Forms.TextBox txt_nombTicket;
         private System.Windows.Forms.Label lbl_nombre;
         private DevExpress.XtraEditors.LabelControl lblCrearTicket;
+        private System.Windows.Forms.ComboBox cmb_prioridad;
+        private System.Windows.Forms.Label lblPrioridad;
     }
 }
