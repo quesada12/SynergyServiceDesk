@@ -39,6 +39,10 @@ namespace Interfaz
             cmb_categoria.DataSource = categoria;
             cmb_categoria.ValueMember = nameof(CategoriaTicket.id_tipoticket);
             cmb_categoria.DisplayMember = nameof(CategoriaTicket.tipo);
+            //foreach (var e in estado)
+            //{
+            //    cmb_estado.Items.Add(e.estado);
+            //}
         }
 
         private void CargaEstado()
@@ -66,7 +70,7 @@ namespace Interfaz
 
         private void cmbPrioridad_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            string prioridad = cmb_prioridad.SelectedValue.ToString();
         }
     }
 }
