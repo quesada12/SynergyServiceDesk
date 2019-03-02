@@ -45,15 +45,15 @@ namespace Interfaz
             Usuario activar = logica.BuscarUsuario(nombre[0], nombre[1]);
             BD.ActivarUsuario(activar);
             MessageBox.Show("Usuario activado", "Usuario",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
-            AdminMenu menu = new AdminMenu(usuario);
-            menu.Show();
+            //AdminMenu menu = new AdminMenu(usuario);
+            //menu.Show();
             this.Close();
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)
         {
-            AdminMenu menu = new AdminMenu(usuario);
-            menu.Show();
+            //AdminMenu menu = new AdminMenu(usuario);
+            //menu.Show();
             this.Close();
         }
     }

@@ -32,10 +32,9 @@ namespace Interfaz
             {
                 if (u.Estado.Equals("A"))
                 {
-                    if (!u.Nombre.Equals(usuario.Nombre) && !u.Apellidos.Equals(usuario.Apellidos))
-                    {
+                    
                         cbxUsuarios.Items.Add(u.Nombre + " " + u.Apellidos);
-                    }
+                    
                     
                 }
             }
@@ -49,15 +48,15 @@ namespace Interfaz
             Usuario inactivar = logica.BuscarUsuario(nombre[0], nombre[1]);
             BD.InactivarUsuario(inactivar);
             MessageBox.Show("Usuario inactivado", "Usuario", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            AdminMenu menu = new AdminMenu(usuario);
-            menu.Show();
+            //AdminMenu menu = new AdminMenu(usuario);
+            //menu.Show();
             this.Close();
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)
         {
-            AdminMenu menu = new AdminMenu(usuario);
-            menu.Show();
+            //AdminMenu menu = new AdminMenu(usuario);
+            //menu.Show();
             this.Close();
         }
     }
