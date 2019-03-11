@@ -14,9 +14,10 @@ namespace AccesoDatos
         //STRING DE CONEXION PARA PC DE JOSUE
         //static string connString = "Data Source=MSI\\JOSUE_SRV;Initial Catalog=SistemaTickets;Integrated Security=True;";
 
-        //STRING DE CONEXION PARA PC DE XXXXXX
+        //STRING DE CONEXION PARA PC DE Adrian
         static string connString = "Data Source=ADRIAN\\MSSQLSRVER;Initial Catalog=SistemaTickets;Integrated Security=True;";
-
+        //STRING DE CONEXION PARA PC DE Ricardo
+        //static string connString = "Data Source=(LocalDB)\\MSSQLLocalDB;Initial Catalog=SistemaTickets;Integrated Security=True;";
 
         //METODOS DE CONEXION TABLA USUARIO
 
