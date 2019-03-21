@@ -43,7 +43,7 @@ namespace Interfaz
             string[] nombre;
             nombre = seleccion.Split(' ');
             Usuario activar = logica.BuscarUsuario(nombre[0], nombre[1]);
-            BD.ActivarUsuario(activar);
+           // BD.ActivarUsuario(activar);
             MessageBox.Show("Usuario activado", "Usuario",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
             //AdminMenu menu = new AdminMenu(usuario);
             //menu.Show();

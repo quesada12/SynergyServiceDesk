@@ -12,10 +12,10 @@ namespace AccesoDatos
     public class BD
     {
         //STRING DE CONEXION PARA PC DE JOSUE
-        //static string connString = "Data Source=MSI\\JOSUE_SRV;Initial Catalog=SistemaTickets;Integrated Security=True;";
+        static string connString = "Data Source=MSI\\JOSUE_SRV;Initial Catalog=SistemaTickets;Integrated Security=True;";
 
         //STRING DE CONEXION PARA PC DE Adrian
-        static string connString = "Data Source=ADRIAN\\MSSQLSRVER;Initial Catalog=SistemaTickets;Integrated Security=True;";
+        //static string connString = "Data Source=ADRIAN\\MSSQLSRVER;Initial Catalog=SistemaTickets;Integrated Security=True;";
         //STRING DE CONEXION PARA PC DE Ricardo
         //static string connString = "Data Source=(LocalDB)\\MSSQLLocalDB;Initial Catalog=SistemaTickets;Integrated Security=True;";
 
@@ -51,33 +51,22 @@ namespace AccesoDatos
             }
         }
 
-        public static void InactivarUsuario(Usuario usuario)
+        public static void ModificarUsuario(string tel, string dep, string con, string est, string username)
         {
-            string sql = "update [SistemaTickets].[dbo].[usuario] set estado = @estado where nombre = @nombre and apellidos=@apellidos";
+            string sql = "update [SistemaTickets].[dbo].[usuario] set telefono = @telefono , departamento = @dpt, contrasena = @contrasena, estado=@estado where nombreusuario = @nombreusuario";
             using (SqlConnection conn = new SqlConnection(connString))
             {
                 var rows = conn.Execute(sql, new
                 {
-                    nombre=usuario.Nombre,
-                    apellidos=usuario.Apellidos,
-                    estado = "I"
+                    telefono = tel,
+                    dpt = dep,
+                    contrasena = con,
+                    estado = est,
+                    nombreusuario = username
                 });
             }
         }
 
-        public static void ActivarUsuario(Usuario usuario)
-        {
-            string sql = "update [SistemaTickets].[dbo].[usuario] set estado = @estado where nombre = @nombre and apellidos=@apellidos";
-            using (SqlConnection conn = new SqlConnection(connString))
-            {
-                var rows = conn.Execute(sql, new
-                {
-                    nombre = usuario.Nombre,
-                    apellidos = usuario.Apellidos,
-                    estado = "A"
-                });
-            }
-        }
 
         //METODOS DE CONEXION TABLA DEPARTAMENTO 
 
@@ -104,12 +93,29 @@ namespace AccesoDatos
             }
         }
 
+        //METODOS DE CONEXION TABLA COMENTARIO
+
+        public static void CrearComentario(Comentario comentario)
+        {
+            string sql = "insert into [SistemaTickets].[dbo].[comentario] ([id_ticket], [usuario_tecnico], [comentario] ) VALUES (@id_ticket, @usuario_tecnico, @comentario)";
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                var rows = conn.Execute(sql, new
+                {
+                    comentario.id_Ticket,
+                    comentario.usuario_tecnico,
+                    comentario.comentario
+                });
+            }
+        }
+        
+        
         //METODOS DE CONEXION TABLA TICKETS
 
         // INSERT A TABLA TICKET 
         public static void CrearTicket(Ticket ticket)
         {
-            string sql = "insert into [SistemaTickets].[dbo].[ticket] ([nombre_ticket], [comentarios], [fecha_creacion], [fecha_estimada], [fecha_cierre], [usuario_solicita], [usuario_atiende],[prioridad],[estado],[tipo_ticket] ) VALUES (@nombre_ticket, @comentarios, @fecha_creacion, @fecha_estimada, @fecha_cierre, @usuario_solicita, @usuario_atiende, @prioridad, @estado, @tipo_ticket)";
+            string sql = "insert into [SistemaTickets].[dbo].[ticket] ([nombre_ticket], [comentarios], [fecha_creacion], [fecha_estimada], [fecha_cierre], [correo_solicita], [usuario_atiende],[prioridad],[estado],[tipo_ticket] ) VALUES (@nombre_ticket, @comentarios, @fecha_creacion, @fecha_estimada, @fecha_cierre, @correo_solicita, @usuario_atiende, @prioridad, @estado, @tipo_ticket)";
             using (SqlConnection conn = new SqlConnection(connString))
             {
                 var rows = conn.Execute(sql, new
@@ -119,11 +125,24 @@ namespace AccesoDatos
                     ticket.fecha_creacion,
                     ticket.fecha_estimada,
                     ticket.fecha_cierre,
-                    ticket.usuario_solicita,
+                    ticket.correo_solicita,
                     ticket.usuario_atiende,
                     ticket.prioridad,
                     ticket.estado,
                     ticket.tipo_ticket
+                });
+            }
+        }
+
+        public static void ModificarTicket(int id_ticket, string estado)
+        {
+            string sql = "update [SistemaTickets].[dbo].[ticket] set estado = @estado where id_ticket = @id_ticket";
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                var rows = conn.Execute(sql, new
+                {
+                    id_ticket = id_ticket,
+                    estado = estado
                 });
             }
         }
@@ -154,27 +173,17 @@ namespace AccesoDatos
 
         // SELECT PARA EL ESTADO DE TICKETS
 
-        public static List<EstadoTicket> ObtenereSTADO()
+        public static List<TipoTicket> ObtenerTipoTicket()
         {
-            List<EstadoTicket> estado;
+            List<TipoTicket> tipos;
             using (SqlConnection conn = new SqlConnection(connString))
             {
-                estado = conn.Query<EstadoTicket>("select * from [SistemaTickets].[dbo].[estado]").ToList();
+                tipos = conn.Query<TipoTicket>("select * from [SistemaTickets].[dbo].[tipo_ticket]").ToList();
             }
-            return estado;
+            return tipos;
         }
 
-        // SELECT PARA LA CATEGORIA DE TICKETS
-
-        public static List<CategoriaTicket> ObtenerCategoria()
-        {
-            List<CategoriaTicket> categoria;
-            using (SqlConnection conn = new SqlConnection(connString))
-            {
-                categoria = conn.Query<CategoriaTicket>("select * from [SistemaTickets].[dbo].[tipo_ticket]").ToList();
-            }
-            return categoria;
-        }
+        
 
     }
 }

@@ -87,5 +87,23 @@ namespace LogicaNegocio
             return null;
         }
 
+        public Usuario BuscarUsuario(string email)
+        {
+            foreach (var u in usuarios)
+            {
+                if (u.Correo.Equals(email))
+                {
+                    return u;
+                }
+            }
+            return null;
+        }
+
+        public void EditarUsuario(string tel, string dep, string con, string est, string username)
+        {
+            BD.ModificarUsuario(tel, dep, con, est, username);
+            usuarios = BD.ObtenerUsuarios();
+        }
+
     }
 }

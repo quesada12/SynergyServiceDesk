@@ -46,7 +46,7 @@ namespace Interfaz
             string[] nombre;
             nombre = seleccion.Split(' ');
             Usuario inactivar = logica.BuscarUsuario(nombre[0], nombre[1]);
-            BD.InactivarUsuario(inactivar);
+            //BD.InactivarUsuario(inactivar);
             MessageBox.Show("Usuario inactivado", "Usuario", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             //AdminMenu menu = new AdminMenu(usuario);
             //menu.Show();

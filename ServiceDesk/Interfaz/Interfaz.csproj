@@ -63,6 +63,7 @@
     <Reference Include="DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -77,35 +78,63 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ActivarUsuario.cs">
+    <Compile Include="Administración Tickets\CrearComentario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ActivarUsuario.Designer.cs">
+    <Compile Include="Administración Tickets\CrearComentario.Designer.cs">
+      <DependentUpon>CrearComentario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administración Tickets\ModificarTickets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administración Tickets\ModificarTickets.Designer.cs">
+      <DependentUpon>ModificarTickets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administración Usuarios\ActivarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administración Usuarios\ActivarUsuario.Designer.cs">
       <DependentUpon>ActivarUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminMenu.cs">
+    <Compile Include="Administración Usuarios\CrearDepartamento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminMenu.Designer.cs">
-      <DependentUpon>AdminMenu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CrearDepartamento.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CrearDepartamento.Designer.cs">
+    <Compile Include="Administración Usuarios\CrearDepartamento.Designer.cs">
       <DependentUpon>CrearDepartamento.cs</DependentUpon>
     </Compile>
-    <Compile Include="CrearUsuario.cs">
+    <Compile Include="Administración Usuarios\CrearUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CrearUsuario.Designer.cs">
+    <Compile Include="Administración Usuarios\CrearUsuario.Designer.cs">
       <DependentUpon>CrearUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="CreaTickets.cs">
+    <Compile Include="Administración Usuarios\EditarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CreaTickets.Designer.cs">
+    <Compile Include="Administración Usuarios\EditarUsuario.Designer.cs">
+      <DependentUpon>EditarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administración Usuarios\ModificarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administración Usuarios\ModificarUsuario.Designer.cs">
+      <DependentUpon>ModificarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administración Tickets\CreaTickets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administración Tickets\CreaTickets.Designer.cs">
       <DependentUpon>CreaTickets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConexionComentarios.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConexionComentarios.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ConexionUsuarios.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConexionUsuarios.xsd</DependentUpon>
     </Compile>
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
@@ -113,16 +142,10 @@
     <Compile Include="Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="GridUsuario.cs">
+    <Compile Include="Administración Usuarios\InactivarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GridUsuario.Designer.cs">
-      <DependentUpon>GridUsuario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InactivarUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InactivarUsuario.Designer.cs">
+    <Compile Include="Administración Usuarios\InactivarUsuario.Designer.cs">
       <DependentUpon>InactivarUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
@@ -133,28 +156,39 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="ActivarUsuario.resx">
+    <Compile Include="TicketsActivos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TicketsActivos.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Administración Tickets\CrearComentario.resx">
+      <DependentUpon>CrearComentario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administración Tickets\ModificarTickets.resx">
+      <DependentUpon>ModificarTickets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administración Usuarios\ActivarUsuario.resx">
       <DependentUpon>ActivarUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminMenu.resx">
-      <DependentUpon>AdminMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CrearDepartamento.resx">
+    <EmbeddedResource Include="Administración Usuarios\CrearDepartamento.resx">
       <DependentUpon>CrearDepartamento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CrearUsuario.resx">
+    <EmbeddedResource Include="Administración Usuarios\CrearUsuario.resx">
       <DependentUpon>CrearUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CreaTickets.resx">
+    <EmbeddedResource Include="Administración Usuarios\EditarUsuario.resx">
+      <DependentUpon>EditarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administración Usuarios\ModificarUsuario.resx">
+      <DependentUpon>ModificarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administración Tickets\CreaTickets.resx">
       <DependentUpon>CreaTickets.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GridUsuario.resx">
-      <DependentUpon>GridUsuario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InactivarUsuario.resx">
+    <EmbeddedResource Include="Administración Usuarios\InactivarUsuario.resx">
       <DependentUpon>InactivarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
@@ -170,6 +204,28 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="ConexionComentarios.xsc">
+      <DependentUpon>ConexionComentarios.xsd</DependentUpon>
+    </None>
+    <None Include="ConexionComentarios.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ConexionComentarios.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ConexionComentarios.xss">
+      <DependentUpon>ConexionComentarios.xsd</DependentUpon>
+    </None>
+    <None Include="ConexionUsuarios.xsc">
+      <DependentUpon>ConexionUsuarios.xsd</DependentUpon>
+    </None>
+    <None Include="ConexionUsuarios.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ConexionUsuarios.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ConexionUsuarios.xss">
+      <DependentUpon>ConexionUsuarios.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -180,6 +236,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="TicketsActivos.xsc">
+      <DependentUpon>TicketsActivos.xsd</DependentUpon>
+    </None>
+    <None Include="TicketsActivos.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TicketsActivos.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TicketsActivos.xss">
+      <DependentUpon>TicketsActivos.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -210,5 +277,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

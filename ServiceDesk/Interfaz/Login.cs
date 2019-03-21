@@ -19,7 +19,9 @@ namespace Interfaz
             InitializeComponent();
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        
+
+        private void btnLogin_Click_1(object sender, EventArgs e)
         {
             UsuarioLogica logica = new UsuarioLogica();
             Usuario actual = logica.Login(txtNombreUsuario.Text, txtContrasena.Text);
@@ -31,10 +33,10 @@ namespace Interfaz
             }
             else if (actual.Estado.Equals("A"))
             {
-                MessageBox.Show("Ingreso Correcto", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Ingreso Correcto, Bienvenido "+actual.Nombre+" "+actual.Apellidos, "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 //AdminMenu menu = new AdminMenu(actual);
                 //menu.Show();
-                Dashboard menu = new Dashboard();
+                Dashboard menu = new Dashboard(actual);
                 menu.Show();
                 this.Close();
             }
@@ -45,9 +47,6 @@ namespace Interfaz
                 txtContrasena.Text = "";
 
             }
-
-
-
         }
     }
 }

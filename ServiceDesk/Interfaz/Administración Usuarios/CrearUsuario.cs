@@ -28,8 +28,7 @@ namespace Interfaz
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            //AdminMenu menu = new AdminMenu(usuario);
-            //menu.Show();
+           
             this.Close();
         }
 

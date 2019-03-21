@@ -15,11 +15,11 @@ namespace Entidades
         public string fecha_creacion { get; set; }
         public string fecha_estimada { get; set; }
         public string fecha_cierre { get; set; }
-        public int usuario_solicita { get; set; }
+        public string correo_solicita { get; set; }
         public string usuario_atiende { get; set; }
-        public int prioridad { get; set; }
-        public int estado { get; set; }
-        public int tipo_ticket { get; set; }
+        public string prioridad { get; set; }
+        public string estado { get; set; }
+        public string tipo_ticket { get; set; }
 
     }
 }

@@ -43,9 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CategoriaTicket.cs" />
+    <Compile Include="Comentario.cs" />
     <Compile Include="Departamento.cs" />
-    <Compile Include="EstadoTicket.cs" />
+    <Compile Include="TipoTicket.cs" />
     <Compile Include="PrioridadTicket.cs" />
     <Compile Include="Ticket.cs" />
     <Compile Include="Usuario.cs" />

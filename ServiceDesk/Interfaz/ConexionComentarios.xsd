@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ConexionComentarios" targetNamespace="http://tempuri.org/ConexionComentarios.xsd" xmlns:mstns="http://tempuri.org/ConexionComentarios.xsd" xmlns="http://tempuri.org/ConexionComentarios.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConsultaUsuarios" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConsultaUsuarios (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Interfaz.Properties.Settings.GlobalReference.Default.ConsultaUsuarios" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ListaComentariosTableAdapter" GeneratorDataComponentClassName="ListaComentariosTableAdapter" Name="ListaComentarios" UserDataComponentName="ListaComentariosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConsultaUsuarios (Settings)" DbObjectName="SistemaTickets.dbo.ListaComentarios" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT [Ticket ID], Comentario, Tecnico, Fecha FROM dbo.ListaComentarios</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Ticket ID" DataSetColumn="Ticket ID" />
+              <Mapping SourceColumn="Comentario" DataSetColumn="Comentario" />
+              <Mapping SourceColumn="Tecnico" DataSetColumn="Tecnico" />
+              <Mapping SourceColumn="Fecha" DataSetColumn="Fecha" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ConexionComentarios" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="ConexionComentarios" msprop:Generator_UserDSName="ConexionComentarios">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ListaComentarios" msprop:Generator_TableClassName="ListaComentariosDataTable" msprop:Generator_TableVarName="tableListaComentarios" msprop:Generator_TablePropName="ListaComentarios" msprop:Generator_RowDeletingName="ListaComentariosRowDeleting" msprop:Generator_RowChangingName="ListaComentariosRowChanging" msprop:Generator_RowEvHandlerName="ListaComentariosRowChangeEventHandler" msprop:Generator_RowDeletedName="ListaComentariosRowDeleted" msprop:Generator_UserTableName="ListaComentarios" msprop:Generator_RowChangedName="ListaComentariosRowChanged" msprop:Generator_RowEvArgName="ListaComentariosRowChangeEvent" msprop:Generator_RowClassName="ListaComentariosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Ticket_x0020_ID" msprop:Generator_ColumnVarNameInTable="columnTicket_ID" msprop:Generator_ColumnPropNameInRow="Ticket_ID" msprop:Generator_ColumnPropNameInTable="Ticket_IDColumn" msprop:Generator_UserColumnName="Ticket ID" type="xs:int" />
+              <xs:element name="Comentario" msprop:Generator_ColumnVarNameInTable="columnComentario" msprop:Generator_ColumnPropNameInRow="Comentario" msprop:Generator_ColumnPropNameInTable="ComentarioColumn" msprop:Generator_UserColumnName="Comentario">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Tecnico" msprop:Generator_ColumnVarNameInTable="columnTecnico" msprop:Generator_ColumnPropNameInRow="Tecnico" msprop:Generator_ColumnPropNameInTable="TecnicoColumn" msprop:Generator_UserColumnName="Tecnico">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" msprop:Generator_UserColumnName="Fecha" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
