@@ -26,12 +26,19 @@ namespace Interfaz.Administración_Tickets
 
         private void btnCrear_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtComentario.Text))
+            {
+                MessageBox.Show("Comentario no puede estar vacío", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
             Comentario comentario = new Comentario() {id_Ticket=ticket.id_ticket,comentario=txtComentario.Text,usuario_tecnico=usuarioActual.NombreUsuario };
             BD.CrearComentario(comentario);
             MessageBox.Show("Comentario agregado");
             ModificarTickets modificar = new ModificarTickets(ticket, usuarioActual);
             modificar.Show();
             this.Close();
+            }
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)

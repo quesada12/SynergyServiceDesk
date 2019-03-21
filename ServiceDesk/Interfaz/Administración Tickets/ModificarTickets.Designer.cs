@@ -45,7 +45,6 @@
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.conexionComentarios1 = new Interfaz.ConexionComentarios();
             this.listaComentarios = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colTicketID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colComentario = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTecnico = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colFecha = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -241,7 +240,6 @@
             // listaComentarios
             // 
             this.listaComentarios.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colTicketID,
             this.colComentario,
             this.colTecnico,
             this.colFecha});
@@ -253,33 +251,26 @@
             this.listaComentarios.OptionsBehavior.AllowFixedGroups = DevExpress.Utils.DefaultBoolean.False;
             this.listaComentarios.OptionsBehavior.Editable = false;
             // 
-            // colTicketID
-            // 
-            this.colTicketID.FieldName = "Ticket ID";
-            this.colTicketID.Name = "colTicketID";
-            this.colTicketID.Visible = true;
-            this.colTicketID.VisibleIndex = 0;
-            // 
             // colComentario
             // 
             this.colComentario.FieldName = "Comentario";
             this.colComentario.Name = "colComentario";
             this.colComentario.Visible = true;
-            this.colComentario.VisibleIndex = 1;
+            this.colComentario.VisibleIndex = 0;
             // 
             // colTecnico
             // 
             this.colTecnico.FieldName = "Tecnico";
             this.colTecnico.Name = "colTecnico";
             this.colTecnico.Visible = true;
-            this.colTecnico.VisibleIndex = 2;
+            this.colTecnico.VisibleIndex = 1;
             // 
             // colFecha
             // 
             this.colFecha.FieldName = "Fecha";
             this.colFecha.Name = "colFecha";
             this.colFecha.Visible = true;
-            this.colFecha.VisibleIndex = 3;
+            this.colFecha.VisibleIndex = 2;
             // 
             // cbxEstado
             // 
@@ -388,7 +379,6 @@
         private DevExpress.XtraEditors.SimpleButton btnGuardar;
         private DevExpress.XtraEditors.SimpleButton btnCancelar;
         private ConexionComentarios conexionComentarios1;
-        private DevExpress.XtraGrid.Columns.GridColumn colTicketID;
         private DevExpress.XtraGrid.Columns.GridColumn colComentario;
         private DevExpress.XtraGrid.Columns.GridColumn colTecnico;
         private DevExpress.XtraGrid.Columns.GridColumn colFecha;

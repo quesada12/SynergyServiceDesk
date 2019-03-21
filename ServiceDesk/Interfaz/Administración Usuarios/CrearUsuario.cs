@@ -124,6 +124,32 @@ namespace Interfaz
             }
         }
 
-      
+        private void mostrarCampos(object sender, EventArgs e)
+        {
+            if (cbxTipo.SelectedItem.ToString().Equals("Cliente"))
+            {
+                txtUsuario.Hide();
+                label8.Hide();
+                label9.Hide();
+                label10.Hide();
+                txtContrasena.Hide();
+                txtContrasena2.Hide();
+            }
+            else
+            {
+                txtUsuario.Show();
+                label8.Show();
+                label9.Show();
+                label10.Show();
+                txtContrasena.Show();
+                txtContrasena2.Show();
+            }
+        }
+
+        private void rellenarUsuario(object sender, EventArgs e)
+        {
+            string[] usuario = txtEmail.Text.Split('@');
+            txtUsuario.Text = usuario[0];
+        }
     }
 }

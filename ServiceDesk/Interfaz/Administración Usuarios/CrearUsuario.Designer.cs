@@ -47,13 +47,13 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtContrasena2 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnCrear = new DevExpress.XtraEditors.SimpleButton();
             this.btnCancelar = new DevExpress.XtraEditors.SimpleButton();
+            this.btnCrear = new DevExpress.XtraEditors.SimpleButton();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -72,7 +72,7 @@
             // 
             this.txtNombre.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(113, 49);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(218, 27);
             this.txtNombre.TabIndex = 2;
@@ -93,7 +93,7 @@
             // 
             this.txtApellidos.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellidos.Location = new System.Drawing.Point(441, 49);
-            this.txtApellidos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtApellidos.Margin = new System.Windows.Forms.Padding(2);
             this.txtApellidos.Name = "txtApellidos";
             this.txtApellidos.Size = new System.Drawing.Size(353, 27);
             this.txtApellidos.TabIndex = 4;
@@ -114,10 +114,11 @@
             // 
             this.txtEmail.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(441, 108);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(353, 27);
             this.txtEmail.TabIndex = 6;
+            this.txtEmail.TextChanged += new System.EventHandler(this.rellenarUsuario);
             // 
             // label5
             // 
@@ -135,7 +136,7 @@
             // 
             this.txtTelefono.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono.Location = new System.Drawing.Point(113, 108);
-            this.txtTelefono.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(2);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(218, 27);
             this.txtTelefono.TabIndex = 8;
@@ -162,10 +163,11 @@
             "Tecnico",
             "Cliente"});
             this.cbxTipo.Location = new System.Drawing.Point(79, 49);
-            this.cbxTipo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbxTipo.Margin = new System.Windows.Forms.Padding(2);
             this.cbxTipo.Name = "cbxTipo";
             this.cbxTipo.Size = new System.Drawing.Size(169, 27);
             this.cbxTipo.TabIndex = 10;
+            this.cbxTipo.SelectionChangeCommitted += new System.EventHandler(this.mostrarCampos);
             // 
             // label7
             // 
@@ -185,7 +187,7 @@
             this.cbxDepartamento.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxDepartamento.FormattingEnabled = true;
             this.cbxDepartamento.Location = new System.Drawing.Point(441, 161);
-            this.cbxDepartamento.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbxDepartamento.Margin = new System.Windows.Forms.Padding(2);
             this.cbxDepartamento.Name = "cbxDepartamento";
             this.cbxDepartamento.Size = new System.Drawing.Size(278, 27);
             this.cbxDepartamento.TabIndex = 12;
@@ -206,8 +208,9 @@
             // 
             this.txtUsuario.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.Location = new System.Drawing.Point(79, 100);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.ReadOnly = true;
             this.txtUsuario.Size = new System.Drawing.Size(169, 27);
             this.txtUsuario.TabIndex = 14;
             // 
@@ -227,7 +230,7 @@
             // 
             this.txtContrasena.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContrasena.Location = new System.Drawing.Point(439, 44);
-            this.txtContrasena.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtContrasena.Margin = new System.Windows.Forms.Padding(2);
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.Size = new System.Drawing.Size(182, 27);
             this.txtContrasena.TabIndex = 16;
@@ -249,7 +252,7 @@
             // 
             this.txtContrasena2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContrasena2.Location = new System.Drawing.Point(439, 100);
-            this.txtContrasena2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtContrasena2.Margin = new System.Windows.Forms.Padding(2);
             this.txtContrasena2.Name = "txtContrasena2";
             this.txtContrasena2.Size = new System.Drawing.Size(182, 27);
             this.txtContrasena2.TabIndex = 18;
@@ -269,6 +272,46 @@
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Crear Usuario";
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Appearance.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Appearance.Options.UseFont = true;
+            this.btnCancelar.Location = new System.Drawing.Point(712, 454);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(103, 37);
+            this.btnCancelar.TabIndex = 22;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnCrear
+            // 
+            this.btnCrear.Appearance.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrear.Appearance.Options.UseFont = true;
+            this.btnCrear.Location = new System.Drawing.Point(668, 383);
+            this.btnCrear.Name = "btnCrear";
+            this.btnCrear.Size = new System.Drawing.Size(147, 41);
+            this.btnCrear.TabIndex = 21;
+            this.btnCrear.Text = "Crear";
+            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.label6);
+            this.groupBox3.Controls.Add(this.cbxTipo);
+            this.groupBox3.Controls.Add(this.label9);
+            this.groupBox3.Controls.Add(this.txtUsuario);
+            this.groupBox3.Controls.Add(this.txtContrasena2);
+            this.groupBox3.Controls.Add(this.label8);
+            this.groupBox3.Controls.Add(this.txtContrasena);
+            this.groupBox3.Controls.Add(this.label10);
+            this.groupBox3.ForeColor = System.Drawing.Color.White;
+            this.groupBox3.Location = new System.Drawing.Point(7, 331);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(638, 169);
+            this.groupBox3.TabIndex = 1;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Datos Sistema";
             // 
             // groupBox2
             // 
@@ -291,46 +334,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos Personales";
             // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Controls.Add(this.cbxTipo);
-            this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Controls.Add(this.txtUsuario);
-            this.groupBox3.Controls.Add(this.txtContrasena2);
-            this.groupBox3.Controls.Add(this.label8);
-            this.groupBox3.Controls.Add(this.txtContrasena);
-            this.groupBox3.Controls.Add(this.label10);
-            this.groupBox3.ForeColor = System.Drawing.Color.White;
-            this.groupBox3.Location = new System.Drawing.Point(7, 331);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(638, 169);
-            this.groupBox3.TabIndex = 1;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Datos Sistema";
-            // 
-            // btnCrear
-            // 
-            this.btnCrear.Appearance.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCrear.Appearance.Options.UseFont = true;
-            this.btnCrear.Location = new System.Drawing.Point(668, 383);
-            this.btnCrear.Name = "btnCrear";
-            this.btnCrear.Size = new System.Drawing.Size(147, 41);
-            this.btnCrear.TabIndex = 21;
-            this.btnCrear.Text = "Crear";
-            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Appearance.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Appearance.Options.UseFont = true;
-            this.btnCancelar.Location = new System.Drawing.Point(712, 454);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(103, 37);
-            this.btnCancelar.TabIndex = 22;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
             // CrearUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -338,16 +341,16 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(853, 561);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CrearUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Crear Usuario";
             this.Load += new System.EventHandler(this.CrearUsuario_Load);
             this.groupBox1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }

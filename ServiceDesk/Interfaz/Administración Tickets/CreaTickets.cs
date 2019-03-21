@@ -51,11 +51,11 @@ namespace Interfaz
 
             foreach (var u in usuarios)
             {
-                if (u.Tipo_usuario.Equals("Cliente"))
+                if (u.Tipo_usuario.Equals("Cliente") && u.Estado.Equals("A"))
                 {
                     cmbSolicita.Items.Add(u.Correo);
                 }
-                if (u.Tipo_usuario.Equals("Tecnico"))
+                if (u.Tipo_usuario.Equals("Tecnico") && u.Estado.Equals("A"))
                 {
                     cmb_tecnico.Items.Add(u.NombreUsuario);
                 }

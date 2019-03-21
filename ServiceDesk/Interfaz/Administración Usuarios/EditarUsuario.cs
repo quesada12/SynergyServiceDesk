@@ -66,16 +66,16 @@ namespace Interfaz.Administración_Usuarios
             {
                 if (cbxEstado.SelectedItem == null)
                 {
-                    logica.EditarUsuario(txtTelefono.Text, cbxDepartamento.Text, txtContrasena.Text, edicion.Estado, txtUsuario.Text);
+                    logica.EditarUsuario(txtTelefono.Text, cbxDepartamento.Text, txtContrasena.Text, edicion.Estado, edicion.NombreUsuario);
                 }
                 else
                 {
                     if (cbxEstado.SelectedItem.ToString().Equals("Activo")){
-                        logica.EditarUsuario(txtTelefono.Text, cbxDepartamento.Text, txtContrasena.Text, "A", txtUsuario.Text);
+                        logica.EditarUsuario(txtTelefono.Text, cbxDepartamento.Text, txtContrasena.Text, "A", edicion.NombreUsuario);
                     }
                     else
                     {
-                        logica.EditarUsuario(txtTelefono.Text, cbxDepartamento.Text, txtContrasena.Text, "I", txtUsuario.Text);
+                        logica.EditarUsuario(txtTelefono.Text, cbxDepartamento.Text, txtContrasena.Text, "I", edicion.NombreUsuario);
                     }
                     
                 }
@@ -84,17 +84,17 @@ namespace Interfaz.Administración_Usuarios
             {
                 if (cbxEstado.SelectedItem == null)
                 {
-                    logica.EditarUsuario(txtTelefono.Text, cbxDepartamento.SelectedItem.ToString(), txtContrasena.Text, edicion.Estado, txtUsuario.Text);
+                    logica.EditarUsuario(txtTelefono.Text, cbxDepartamento.SelectedItem.ToString(), txtContrasena.Text, edicion.Estado, edicion.NombreUsuario);
                 }
                 else
                 {
                     if (cbxEstado.SelectedItem.ToString().Equals("Activo"))
                     {
-                        logica.EditarUsuario(txtTelefono.Text, cbxDepartamento.Text, txtContrasena.Text, "A", txtUsuario.Text);
+                        logica.EditarUsuario(txtTelefono.Text, cbxDepartamento.Text, txtContrasena.Text, "A", edicion.NombreUsuario);
                     }
                     else
                     {
-                        logica.EditarUsuario(txtTelefono.Text, cbxDepartamento.Text, txtContrasena.Text, "I", txtUsuario.Text);
+                        logica.EditarUsuario(txtTelefono.Text, cbxDepartamento.Text, txtContrasena.Text, "I", edicion.NombreUsuario);
                     }
                 }
             }

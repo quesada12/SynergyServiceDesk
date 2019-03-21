@@ -62,6 +62,7 @@ namespace LogicaNegocio
 
         public Usuario CrearUsuarioCliente(string nombre, string apellidos, string correo, string telefono, string tipo, string departamento)
         {
+            string[] nombreusuario = correo.Split('@');
             foreach (var u in usuarios)
             {
                 if (u.Correo.Equals(correo))
@@ -69,7 +70,7 @@ namespace LogicaNegocio
                     return null;
                 }
             }
-            Usuario nuevo = new Usuario() { Nombre = nombre, Apellidos = apellidos, Correo = correo, Telefono = telefono, Tipo_usuario = tipo, Departamento = departamento,Estado="A" };
+            Usuario nuevo = new Usuario() { Nombre = nombre, Apellidos = apellidos, Correo = correo, Telefono = telefono, Tipo_usuario = tipo, Departamento = departamento,Estado="A",NombreUsuario=nombreusuario[0] };
             BD.CrearUsuario(nuevo);
             this.ActualizarLista();
             return nuevo;
