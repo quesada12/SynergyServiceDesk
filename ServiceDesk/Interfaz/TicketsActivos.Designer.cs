@@ -291,6 +291,8 @@ namespace Interfaz {
             
             private global::System.Data.DataColumn columnPrioridad;
             
+            private global::System.Data.DataColumn columnEstado;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public ListaTicketsActivosDataTable() {
@@ -374,6 +376,14 @@ namespace Interfaz {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn EstadoColumn {
+                get {
+                    return this.columnEstado;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -409,7 +419,7 @@ namespace Interfaz {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ListaTicketsActivosRow AddListaTicketsActivosRow(string Nombre, System.DateTime Creacion, string Usuario_solicita, string Tecnico, string Tipo, string Prioridad) {
+            public ListaTicketsActivosRow AddListaTicketsActivosRow(string Nombre, System.DateTime Creacion, string Usuario_solicita, string Tecnico, string Tipo, string Prioridad, string Estado) {
                 ListaTicketsActivosRow rowListaTicketsActivosRow = ((ListaTicketsActivosRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Nombre,
@@ -417,7 +427,8 @@ namespace Interfaz {
                         Usuario_solicita,
                         Tecnico,
                         Tipo,
-                        Prioridad};
+                        Prioridad,
+                        Estado};
                 rowListaTicketsActivosRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowListaTicketsActivosRow);
                 return rowListaTicketsActivosRow;
@@ -446,6 +457,7 @@ namespace Interfaz {
                 this.columnTecnico = base.Columns["Tecnico"];
                 this.columnTipo = base.Columns["Tipo"];
                 this.columnPrioridad = base.Columns["Prioridad"];
+                this.columnEstado = base.Columns["Estado"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -463,6 +475,8 @@ namespace Interfaz {
                 base.Columns.Add(this.columnTipo);
                 this.columnPrioridad = new global::System.Data.DataColumn("Prioridad", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPrioridad);
+                this.columnEstado = new global::System.Data.DataColumn("Estado", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEstado);
                 this.columnNombre.AllowDBNull = false;
                 this.columnNombre.MaxLength = 15;
                 this.columnCreacion.ReadOnly = true;
@@ -474,6 +488,8 @@ namespace Interfaz {
                 this.columnTipo.MaxLength = 15;
                 this.columnPrioridad.AllowDBNull = false;
                 this.columnPrioridad.MaxLength = 15;
+                this.columnEstado.AllowDBNull = false;
+                this.columnEstado.MaxLength = 15;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -687,6 +703,17 @@ namespace Interfaz {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Estado {
+                get {
+                    return ((string)(this[this.tableListaTicketsActivos.EstadoColumn]));
+                }
+                set {
+                    this[this.tableListaTicketsActivos.EstadoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsCreacionNull() {
                 return this.IsNull(this.tableListaTicketsActivos.CreacionColumn);
             }
@@ -863,6 +890,7 @@ namespace Interfaz.TicketsActivosTableAdapters {
             tableMapping.ColumnMappings.Add("Tecnico", "Tecnico");
             tableMapping.ColumnMappings.Add("Tipo", "Tipo");
             tableMapping.ColumnMappings.Add("Prioridad", "Prioridad");
+            tableMapping.ColumnMappings.Add("Estado", "Estado");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -879,8 +907,8 @@ namespace Interfaz.TicketsActivosTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Nombre, Creacion, [Usuario solicita], Tecnico, Tipo, Prioridad FROM dbo.Li" +
-                "staTicketsActivos";
+            this._commandCollection[0].CommandText = "SELECT Nombre, Creacion, [Usuario solicita], Tecnico, Tipo, Prioridad, Estado FRO" +
+                "M dbo.ListaTicketsActivos";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

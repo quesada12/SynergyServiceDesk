@@ -1,4 +1,5 @@
-﻿using Entidades;
+﻿using AccesoDatos;
+using Entidades;
 using LogicaNegocio;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,7 @@ namespace Interfaz.Administración_Tickets
         Ticket ticket;
         Usuario usuarioActual;
         Ticketslogica logica = new Ticketslogica();
+        List<Usuario> usuarios = new List<Usuario>();
 
         public ModificarTickets(Ticket ticket, Usuario usuarioActual)
         {
@@ -27,19 +29,36 @@ namespace Interfaz.Administración_Tickets
             listaComentariosTableAdapter1.Fill(conexionComentarios1.ListaComentarios);
         }
 
+
+        private void cargaUsuarios()
+        {
+            usuarios = BD.ObtenerUsuarios();
+            foreach (var u in usuarios)
+            {
+                if (u.Tipo_usuario.Equals("Tecnico") && u.Estado.Equals("A") && !u.NombreUsuario.Equals(ticket.usuario_atiende))
+                {
+                    cbxTecnico.Items.Add(u.NombreUsuario.ToString());
+                }
+            }
+        }
+
         private void ModificarTickets_Load(object sender, EventArgs e)
         {
+
+            this.cargaUsuarios();
+
             cbxEstado.Items.Add("Pendiente");
             cbxEstado.Items.Add("Proceso");
             cbxEstado.Items.Add("Completado");
 
             txt_nombTicket.Text = ticket.nombre_ticket;
             txtUsuarioSolicita.Text = ticket.correo_solicita;
-            txtUsuarioTecnico.Text = ticket.usuario_atiende;
+        
             txtTipo.Text = ticket.tipo_ticket;
             txtPrioridad.Text = ticket.prioridad;
             txt_comentario.Text = ticket.comentarios;
             cbxEstado.Text = ticket.estado;
+            cbxTecnico.Text = ticket.usuario_atiende;
         }
 
         private void simpleButton3_Click(object sender, EventArgs e)
@@ -51,15 +70,30 @@ namespace Interfaz.Administración_Tickets
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if(cbxEstado.SelectedItem == null)
+
+            if (cbxEstado.SelectedItem == null)
             {
-                logica.EditarTicket(ticket.id_ticket, cbxEstado.Text);
+                logica.EditarTicket(ticket.id_ticket, cbxEstado.Text, cbxTecnico.SelectedItem.ToString());
+                MessageBox.Show("Ticket Actualizado");
             }
             else
             {
-                logica.EditarTicket(ticket.id_ticket, cbxEstado.SelectedItem.ToString());
+                if (cbxTecnico.SelectedItem == null)
+                {
+                    logica.EditarTicket(ticket.id_ticket, cbxEstado.SelectedItem.ToString(), cbxTecnico.Text);
+                    MessageBox.Show("Ticket Actualizado");
+                }
+                else
+                {
+                    logica.EditarTicket(ticket.id_ticket, cbxEstado.SelectedItem.ToString(), cbxTecnico.SelectedItem.ToString());
+                    MessageBox.Show("Ticket Actualizado");
+                }
             }
-            MessageBox.Show("Ticket Actualizado");
+
+
+
+
+            this.cargaUsuarios();
             Dashboard dash = new Dashboard(usuarioActual);
             dash.Show();
             this.Close();
@@ -72,6 +106,7 @@ namespace Interfaz.Administración_Tickets
                 if (!listaComentarios.GetRowCellValue(i, "Ticket ID").ToString().Equals(ticket.id_ticket.ToString()))
                 {
                     listaComentarios.DeleteRow(i);
+                    i -= 1;
                 }
             }
         }

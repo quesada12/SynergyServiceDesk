@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtUsuarioTecnico = new System.Windows.Forms.TextBox();
             this.txtPrioridad = new System.Windows.Forms.TextBox();
             this.txtTipo = new System.Windows.Forms.TextBox();
             this.txtUsuarioSolicita = new System.Windows.Forms.TextBox();
@@ -54,6 +53,7 @@
             this.btnGuardar = new DevExpress.XtraEditors.SimpleButton();
             this.btnCancelar = new DevExpress.XtraEditors.SimpleButton();
             this.listaComentariosTableAdapter1 = new Interfaz.ConexionComentariosTableAdapters.ListaComentariosTableAdapter();
+            this.cbxTecnico = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -63,7 +63,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtUsuarioTecnico);
+            this.groupBox1.Controls.Add(this.cbxTecnico);
             this.groupBox1.Controls.Add(this.txtPrioridad);
             this.groupBox1.Controls.Add(this.txtTipo);
             this.groupBox1.Controls.Add(this.txtUsuarioSolicita);
@@ -83,15 +83,6 @@
             this.groupBox1.TabIndex = 49;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Información Ticket";
-            // 
-            // txtUsuarioTecnico
-            // 
-            this.txtUsuarioTecnico.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuarioTecnico.Location = new System.Drawing.Point(144, 206);
-            this.txtUsuarioTecnico.Name = "txtUsuarioTecnico";
-            this.txtUsuarioTecnico.ReadOnly = true;
-            this.txtUsuarioTecnico.Size = new System.Drawing.Size(246, 27);
-            this.txtUsuarioTecnico.TabIndex = 51;
             // 
             // txtPrioridad
             // 
@@ -329,6 +320,15 @@
             // 
             this.listaComentariosTableAdapter1.ClearBeforeFill = true;
             // 
+            // cbxTecnico
+            // 
+            this.cbxTecnico.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxTecnico.FormattingEnabled = true;
+            this.cbxTecnico.Location = new System.Drawing.Point(144, 207);
+            this.cbxTecnico.Name = "cbxTecnico";
+            this.cbxTecnico.Size = new System.Drawing.Size(246, 27);
+            this.cbxTecnico.TabIndex = 55;
+            // 
             // ModificarTickets
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -358,7 +358,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtUsuarioTecnico;
         private System.Windows.Forms.TextBox txtPrioridad;
         private System.Windows.Forms.TextBox txtTipo;
         private System.Windows.Forms.TextBox txtUsuarioSolicita;
@@ -383,5 +382,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colTecnico;
         private DevExpress.XtraGrid.Columns.GridColumn colFecha;
         private ConexionComentariosTableAdapters.ListaComentariosTableAdapter listaComentariosTableAdapter1;
+        private System.Windows.Forms.ComboBox cbxTecnico;
     }
 }

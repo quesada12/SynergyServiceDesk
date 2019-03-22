@@ -39,9 +39,9 @@ namespace LogicaNegocio
             return null;
         }
 
-        public void EditarTicket(int id, string estado)
+        public void EditarTicket(int id, string estado, string tecnico)
         {
-            BD.ModificarTicket(id, estado);
+            BD.ModificarTicket(id, estado,tecnico);
             tickets = BD.ObtenerTickets();
         }
     }

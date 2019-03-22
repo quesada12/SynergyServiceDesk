@@ -29,11 +29,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraEditors.TileItemElement tileItemElement1 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement2 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement3 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement4 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement5 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement6 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement7 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement8 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement9 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement10 = new DevExpress.XtraEditors.TileItemElement();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.tileBar = new DevExpress.XtraBars.Navigation.TileBar();
             this.tileBarGroupTables = new DevExpress.XtraBars.Navigation.TileBarGroup();
@@ -69,6 +69,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.listaTicketsActivosTableAdapter1 = new Interfaz.TicketsActivosTableAdapters.ListaTicketsActivosTableAdapter();
+            this.colEstado = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.navigationFrame)).BeginInit();
             this.navigationFrame.SuspendLayout();
             this.employeesNavigationPage.SuspendLayout();
@@ -130,17 +131,17 @@
             this.eployeesTileBarItem.AppearanceItem.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(115)))), ((int)(((byte)(196)))));
             this.eployeesTileBarItem.AppearanceItem.Normal.Options.UseBackColor = true;
             this.eployeesTileBarItem.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement1.ImageUri.Uri = "Cube;Size32x32;GrayScaled";
-            tileItemElement1.Text = "Usuarios";
-            this.eployeesTileBarItem.Elements.Add(tileItemElement1);
+            tileItemElement6.ImageUri.Uri = "Cube;Size32x32;GrayScaled";
+            tileItemElement6.Text = "Usuarios";
+            this.eployeesTileBarItem.Elements.Add(tileItemElement6);
             this.eployeesTileBarItem.Name = "eployeesTileBarItem";
             // 
             // tileBarItem3
             // 
             this.tileBarItem3.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement2.ImageUri.Uri = "SendToBack";
-            tileItemElement2.Text = "Departamentos";
-            this.tileBarItem3.Elements.Add(tileItemElement2);
+            tileItemElement7.ImageUri.Uri = "SendToBack";
+            tileItemElement7.Text = "Departamentos";
+            this.tileBarItem3.Elements.Add(tileItemElement7);
             this.tileBarItem3.Id = 5;
             this.tileBarItem3.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.tileBarItem3.Name = "tileBarItem3";
@@ -148,9 +149,9 @@
             // customersTileBarItem
             // 
             this.customersTileBarItem.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement3.ImageUri.Uri = "Edit;Size32x32;Colored";
-            tileItemElement3.Text = "Tickets";
-            this.customersTileBarItem.Elements.Add(tileItemElement3);
+            tileItemElement8.ImageUri.Uri = "Edit;Size32x32;Colored";
+            tileItemElement8.Text = "Tickets";
+            this.customersTileBarItem.Elements.Add(tileItemElement8);
             this.customersTileBarItem.Id = 2;
             this.customersTileBarItem.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.customersTileBarItem.Name = "customersTileBarItem";
@@ -158,9 +159,9 @@
             // tileBarItem1
             // 
             this.tileBarItem1.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement4.ImageUri.Uri = "Open";
-            tileItemElement4.Text = "Tickets Activos";
-            this.tileBarItem1.Elements.Add(tileItemElement4);
+            tileItemElement9.ImageUri.Uri = "Open";
+            tileItemElement9.Text = "Tickets Activos";
+            this.tileBarItem1.Elements.Add(tileItemElement9);
             this.tileBarItem1.Id = 3;
             this.tileBarItem1.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.tileBarItem1.Name = "tileBarItem1";
@@ -168,9 +169,9 @@
             // tileBarItem2
             // 
             this.tileBarItem2.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement5.ImageUri.Uri = "Paste";
-            tileItemElement5.Text = "Historico";
-            this.tileBarItem2.Elements.Add(tileItemElement5);
+            tileItemElement10.ImageUri.Uri = "Paste";
+            tileItemElement10.Text = "Historico";
+            this.tileBarItem2.Elements.Add(tileItemElement10);
             this.tileBarItem2.Id = 4;
             this.tileBarItem2.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.tileBarItem2.Name = "tileBarItem2";
@@ -349,10 +350,10 @@
             // 
             this.gridControl1.DataMember = "ListaTicketsActivos";
             this.gridControl1.DataSource = this.ticketsActivos1;
-            this.gridControl1.Location = new System.Drawing.Point(13, 64);
+            this.gridControl1.Location = new System.Drawing.Point(13, 49);
             this.gridControl1.MainView = this.listaTickets;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(828, 375);
+            this.gridControl1.Size = new System.Drawing.Size(828, 390);
             this.gridControl1.TabIndex = 4;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.listaTickets});
@@ -371,7 +372,8 @@
             this.colUsuariosolicita,
             this.colTecnico,
             this.colTipo,
-            this.colPrioridad});
+            this.colPrioridad,
+            this.colEstado});
             this.listaTickets.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.listaTickets.GridControl = this.gridControl1;
             this.listaTickets.Name = "listaTickets";
@@ -491,6 +493,13 @@
             // 
             this.listaTicketsActivosTableAdapter1.ClearBeforeFill = true;
             // 
+            // colEstado
+            // 
+            this.colEstado.FieldName = "Estado";
+            this.colEstado.Name = "colEstado";
+            this.colEstado.Visible = true;
+            this.colEstado.VisibleIndex = 6;
+            // 
             // Dashboard
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
@@ -553,5 +562,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colTipo;
         private DevExpress.XtraGrid.Columns.GridColumn colPrioridad;
         private TicketsActivosTableAdapters.ListaTicketsActivosTableAdapter listaTicketsActivosTableAdapter1;
+        private DevExpress.XtraGrid.Columns.GridColumn colEstado;
     }
 }

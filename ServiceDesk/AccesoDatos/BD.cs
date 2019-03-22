@@ -134,15 +134,16 @@ namespace AccesoDatos
             }
         }
 
-        public static void ModificarTicket(int id_ticket, string estado)
+        public static void ModificarTicket(int id_ticket, string estado, string usuario_atiende)
         {
-            string sql = "update [SistemaTickets].[dbo].[ticket] set estado = @estado where id_ticket = @id_ticket";
+            string sql = "update [SistemaTickets].[dbo].[ticket] set estado = @estado , usuario_atiende = @usuario_atiende where id_ticket = @id_ticket";
             using (SqlConnection conn = new SqlConnection(connString))
             {
                 var rows = conn.Execute(sql, new
                 {
                     id_ticket = id_ticket,
-                    estado = estado
+                    estado = estado,
+                    usuario_atiende=usuario_atiende
                 });
             }
         }
