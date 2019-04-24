@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TicketsXTecnico" targetNamespace="http://tempuri.org/TicketsXTecnico.xsd" xmlns:mstns="http://tempuri.org/TicketsXTecnico.xsd" xmlns="http://tempuri.org/TicketsXTecnico.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConsultaUsuarios" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConsultaUsuarios (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Interfaz.Properties.Settings.GlobalReference.Default.ConsultaUsuarios" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TicketsPorTecnicoTableAdapter" GeneratorDataComponentClassName="TicketsPorTecnicoTableAdapter" Name="TicketsPorTecnico" UserDataComponentName="TicketsPorTecnicoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConsultaUsuarios (Settings)" DbObjectName="SistemaTickets.dbo.TicketsPorTecnico" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT NombreCompleto, CantidadCompletados, CantidadPendientes FROM dbo.TicketsPorTecnico</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="NombreCompleto" DataSetColumn="NombreCompleto" />
+              <Mapping SourceColumn="CantidadCompletados" DataSetColumn="CantidadCompletados" />
+              <Mapping SourceColumn="CantidadPendientes" DataSetColumn="CantidadPendientes" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TicketsXTecnico" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="TicketsXTecnico" msprop:Generator_UserDSName="TicketsXTecnico">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TicketsPorTecnico" msprop:Generator_TableClassName="TicketsPorTecnicoDataTable" msprop:Generator_TableVarName="tableTicketsPorTecnico" msprop:Generator_TablePropName="TicketsPorTecnico" msprop:Generator_RowDeletingName="TicketsPorTecnicoRowDeleting" msprop:Generator_RowChangingName="TicketsPorTecnicoRowChanging" msprop:Generator_RowEvHandlerName="TicketsPorTecnicoRowChangeEventHandler" msprop:Generator_RowDeletedName="TicketsPorTecnicoRowDeleted" msprop:Generator_UserTableName="TicketsPorTecnico" msprop:Generator_RowChangedName="TicketsPorTecnicoRowChanged" msprop:Generator_RowEvArgName="TicketsPorTecnicoRowChangeEvent" msprop:Generator_RowClassName="TicketsPorTecnicoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NombreCompleto" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNombreCompleto" msprop:Generator_ColumnPropNameInRow="NombreCompleto" msprop:Generator_ColumnPropNameInTable="NombreCompletoColumn" msprop:Generator_UserColumnName="NombreCompleto" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="36" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CantidadCompletados" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCantidadCompletados" msprop:Generator_ColumnPropNameInRow="CantidadCompletados" msprop:Generator_ColumnPropNameInTable="CantidadCompletadosColumn" msprop:Generator_UserColumnName="CantidadCompletados" type="xs:int" minOccurs="0" />
+              <xs:element name="CantidadPendientes" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCantidadPendientes" msprop:Generator_ColumnPropNameInRow="CantidadPendientes" msprop:Generator_ColumnPropNameInTable="CantidadPendientesColumn" msprop:Generator_UserColumnName="CantidadPendientes" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

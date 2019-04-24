@@ -11,6 +11,7 @@ namespace LogicaNegocio
     public class Ticketslogica
     {
         List<Ticket> tickets = new List<Ticket>();
+        UsuarioLogica usuariol = new UsuarioLogica();
         
         
         public Ticketslogica()
@@ -43,6 +44,27 @@ namespace LogicaNegocio
         {
             BD.ModificarTicket(id, estado,tecnico);
             tickets = BD.ObtenerTickets();
+        }
+
+        public void CorreoCincoPendientes()
+        {
+            tickets = BD.ObtenerTickets();
+            int contador = 0;
+            foreach (var t in tickets)
+            {
+                if (t.estado.Equals("Pendiente"))
+                {
+                    contador++;
+                }
+            }
+            if (contador >= 5)
+            {
+                Usuario admin = usuariol.BuscarUsuarioAdmin();
+                Correo enviar = new Correo();
+                enviar.EnviarCorreo(admin.Correo, "***CANTIDAD INCIDENCIAS***", "Existen 5 o más incidencias pendientes");
+            }
+            contador = 0;
+            
         }
     }
 }

@@ -19,6 +19,7 @@ namespace Interfaz
         List<PrioridadTicket> prioridades = new List<PrioridadTicket>();
         List<Usuario> usuarios = new List<Usuario>();
         Ticketslogica logica = new Ticketslogica();
+        UsuarioLogica userL = new UsuarioLogica();
         Usuario usuarioActual;
 
         public CreaTickets(Usuario usuario)
@@ -88,9 +89,15 @@ namespace Interfaz
                     Ticket t = logica.CrearTicket(txt_nombTicket.Text, txt_comentario.Text, cmbSolicita.SelectedItem.ToString(), cmb_tecnico.SelectedItem.ToString(), cmb_prioridad.SelectedItem.ToString(),"Pendiente", cmb_categoria.SelectedItem.ToString());
                     if (t != null)
                     {
-                        MessageBox.Show("Ticket creado");
-                        Dashboard dash = new Dashboard(usuarioActual);
-                        dash.Show();
+                        
+                        Correo confirmacion = new Correo();
+                        Usuario tecnico = userL.BuscarUsuarioPorNombreUsuario(t.usuario_atiende);
+                        confirmacion.EnviarCorreo(tecnico.Correo, "Incidencia Asignada", "Se ha creado la incidencia " + t.nombre_ticket + " y le ha sido asignada");
+                        string result = confirmacion.EnviarCorreo(cmbSolicita.SelectedItem.ToString(), "Ticket ha sido creado", "El ticket para la incidencia " + txt_nombTicket.Text + " ha sido creado y será atendido por " + cmb_tecnico.SelectedItem.ToString());
+                        MessageBox.Show("Ticket creado y "+result);
+                        logica.CorreoCincoPendientes();
+                        //Dashboard dash = new Dashboard(usuarioActual);
+                        //dash.Show();
                         this.Close();
                     }
                 }

@@ -90,9 +90,29 @@ namespace Interfaz.Administración_Tickets
                 }
             }
 
+            //ENVIO DE CORREOS
+            Correo enviar = new Correo();
+            Ticket ticketActualizado = logica.BuscarTicket(ticket.nombre_ticket, ticket.fecha_creacion, ticket.tipo_ticket);
+            if (ticketActualizado.usuario_atiende.Equals(ticket.usuario_atiende))
+            {
 
+            }
+            else
+            {
+                foreach (var usuario in usuarios)
+                {
+                    if (usuario.NombreUsuario.Equals(ticketActualizado.usuario_atiende))
+                    {
+                        enviar.EnviarCorreo(usuario.Correo, "Nueva incidencia asignada", "Se le ha asignado la incidencia con el nombre: " + ticketActualizado.nombre_ticket);
+                    }
+                }
+            }
 
-
+            if (ticketActualizado.estado.Equals("Completado"))
+            {
+                enviar.EnviarCorreo(ticketActualizado.correo_solicita, "Su ticket ha sido solucionado", "Su ticket con el nombre " + ticketActualizado.nombre_ticket + " ha sido solucionado");
+            }
+            logica.CorreoCincoPendientes();
             this.cargaUsuarios();
             Dashboard dash = new Dashboard(usuarioActual);
             dash.Show();
@@ -115,6 +135,13 @@ namespace Interfaz.Administración_Tickets
         {
             CrearComentario crear = new CrearComentario(ticket,usuarioActual);
             crear.Show();
+            this.Close();
+        }
+
+        private void btnContactar_Click(object sender, EventArgs e)
+        {
+            EnviarCorreo correo = new EnviarCorreo(ticket, usuarioActual);
+            correo.Show();
             this.Close();
         }
     }

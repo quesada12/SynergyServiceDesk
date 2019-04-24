@@ -20,17 +20,17 @@ namespace Interfaz {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("TicketsActivos")]
+    [global::System.Xml.Serialization.XmlRootAttribute("TicketsPorMes")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class TicketsActivos : global::System.Data.DataSet {
+    public partial class TicketsPorMes : global::System.Data.DataSet {
         
-        private ListaTicketsActivosDataTable tableListaTicketsActivos;
+        private TicketsPorMesDataTable tableTicketsPorMes;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public TicketsActivos() {
+        public TicketsPorMes() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace Interfaz {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected TicketsActivos(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected TicketsPorMes(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace Interfaz {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["ListaTicketsActivos"] != null)) {
-                    base.Tables.Add(new ListaTicketsActivosDataTable(ds.Tables["ListaTicketsActivos"]));
+                if ((ds.Tables["TicketsPorMes"] != null)) {
+                    base.Tables.Add(new TicketsPorMesDataTable(ds.Tables["TicketsPorMes"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace Interfaz {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public ListaTicketsActivosDataTable ListaTicketsActivos {
+        public TicketsPorMesDataTable _TicketsPorMes {
             get {
-                return this.tableListaTicketsActivos;
+                return this.tableTicketsPorMes;
             }
         }
         
@@ -127,7 +127,7 @@ namespace Interfaz {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            TicketsActivos cln = ((TicketsActivos)(base.Clone()));
+            TicketsPorMes cln = ((TicketsPorMes)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace Interfaz {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["ListaTicketsActivos"] != null)) {
-                    base.Tables.Add(new ListaTicketsActivosDataTable(ds.Tables["ListaTicketsActivos"]));
+                if ((ds.Tables["TicketsPorMes"] != null)) {
+                    base.Tables.Add(new TicketsPorMesDataTable(ds.Tables["TicketsPorMes"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace Interfaz {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableListaTicketsActivos = ((ListaTicketsActivosDataTable)(base.Tables["ListaTicketsActivos"]));
+            this.tableTicketsPorMes = ((TicketsPorMesDataTable)(base.Tables["TicketsPorMes"]));
             if ((initTable == true)) {
-                if ((this.tableListaTicketsActivos != null)) {
-                    this.tableListaTicketsActivos.InitVars();
+                if ((this.tableTicketsPorMes != null)) {
+                    this.tableTicketsPorMes.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace Interfaz {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "TicketsActivos";
+            this.DataSetName = "TicketsPorMes";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/TicketsActivos.xsd";
+            this.Namespace = "http://tempuri.org/TicketsPorMes.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableListaTicketsActivos = new ListaTicketsActivosDataTable();
-            base.Tables.Add(this.tableListaTicketsActivos);
+            this.tableTicketsPorMes = new TicketsPorMesDataTable();
+            base.Tables.Add(this.tableTicketsPorMes);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializeListaTicketsActivos() {
+        private bool ShouldSerialize_TicketsPorMes() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace Interfaz {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            TicketsActivos ds = new TicketsActivos();
+            TicketsPorMes ds = new TicketsPorMes();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,33 +270,23 @@ namespace Interfaz {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void ListaTicketsActivosRowChangeEventHandler(object sender, ListaTicketsActivosRowChangeEvent e);
+        public delegate void TicketsPorMesRowChangeEventHandler(object sender, TicketsPorMesRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class ListaTicketsActivosDataTable : global::System.Data.TypedTableBase<ListaTicketsActivosRow> {
+        public partial class TicketsPorMesDataTable : global::System.Data.TypedTableBase<TicketsPorMesRow> {
             
-            private global::System.Data.DataColumn columnNombre;
+            private global::System.Data.DataColumn columnMes;
             
-            private global::System.Data.DataColumn columnCreacion;
-            
-            private global::System.Data.DataColumn columnUsuario_solicita;
-            
-            private global::System.Data.DataColumn columnTecnico;
-            
-            private global::System.Data.DataColumn columnTipo;
-            
-            private global::System.Data.DataColumn columnPrioridad;
-            
-            private global::System.Data.DataColumn columnEstado;
+            private global::System.Data.DataColumn columnCantidad_Tickets;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ListaTicketsActivosDataTable() {
-                this.TableName = "ListaTicketsActivos";
+            public TicketsPorMesDataTable() {
+                this.TableName = "TicketsPorMes";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -304,7 +294,7 @@ namespace Interfaz {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal ListaTicketsActivosDataTable(global::System.Data.DataTable table) {
+            internal TicketsPorMesDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -321,64 +311,24 @@ namespace Interfaz {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected ListaTicketsActivosDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected TicketsPorMesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn NombreColumn {
+            public global::System.Data.DataColumn MesColumn {
                 get {
-                    return this.columnNombre;
+                    return this.columnMes;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn CreacionColumn {
+            public global::System.Data.DataColumn Cantidad_TicketsColumn {
                 get {
-                    return this.columnCreacion;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Usuario_solicitaColumn {
-                get {
-                    return this.columnUsuario_solicita;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn TecnicoColumn {
-                get {
-                    return this.columnTecnico;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn TipoColumn {
-                get {
-                    return this.columnTipo;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn PrioridadColumn {
-                get {
-                    return this.columnPrioridad;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn EstadoColumn {
-                get {
-                    return this.columnEstado;
+                    return this.columnCantidad_Tickets;
                 }
             }
             
@@ -393,51 +343,46 @@ namespace Interfaz {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ListaTicketsActivosRow this[int index] {
+            public TicketsPorMesRow this[int index] {
                 get {
-                    return ((ListaTicketsActivosRow)(this.Rows[index]));
+                    return ((TicketsPorMesRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event ListaTicketsActivosRowChangeEventHandler ListaTicketsActivosRowChanging;
+            public event TicketsPorMesRowChangeEventHandler TicketsPorMesRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event ListaTicketsActivosRowChangeEventHandler ListaTicketsActivosRowChanged;
+            public event TicketsPorMesRowChangeEventHandler TicketsPorMesRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event ListaTicketsActivosRowChangeEventHandler ListaTicketsActivosRowDeleting;
+            public event TicketsPorMesRowChangeEventHandler TicketsPorMesRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event ListaTicketsActivosRowChangeEventHandler ListaTicketsActivosRowDeleted;
+            public event TicketsPorMesRowChangeEventHandler TicketsPorMesRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddListaTicketsActivosRow(ListaTicketsActivosRow row) {
+            public void AddTicketsPorMesRow(TicketsPorMesRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ListaTicketsActivosRow AddListaTicketsActivosRow(string Nombre, System.DateTime Creacion, string Usuario_solicita, string Tecnico, string Tipo, string Prioridad, string Estado) {
-                ListaTicketsActivosRow rowListaTicketsActivosRow = ((ListaTicketsActivosRow)(this.NewRow()));
+            public TicketsPorMesRow AddTicketsPorMesRow(string Mes, int Cantidad_Tickets) {
+                TicketsPorMesRow rowTicketsPorMesRow = ((TicketsPorMesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Nombre,
-                        Creacion,
-                        Usuario_solicita,
-                        Tecnico,
-                        Tipo,
-                        Prioridad,
-                        Estado};
-                rowListaTicketsActivosRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowListaTicketsActivosRow);
-                return rowListaTicketsActivosRow;
+                        Mes,
+                        Cantidad_Tickets};
+                rowTicketsPorMesRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowTicketsPorMesRow);
+                return rowTicketsPorMesRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                ListaTicketsActivosDataTable cln = ((ListaTicketsActivosDataTable)(base.Clone()));
+                TicketsPorMesDataTable cln = ((TicketsPorMesDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -445,76 +390,52 @@ namespace Interfaz {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new ListaTicketsActivosDataTable();
+                return new TicketsPorMesDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
-                this.columnNombre = base.Columns["Nombre"];
-                this.columnCreacion = base.Columns["Creacion"];
-                this.columnUsuario_solicita = base.Columns["Usuario solicita"];
-                this.columnTecnico = base.Columns["Tecnico"];
-                this.columnTipo = base.Columns["Tipo"];
-                this.columnPrioridad = base.Columns["Prioridad"];
-                this.columnEstado = base.Columns["Estado"];
+                this.columnMes = base.Columns["Mes"];
+                this.columnCantidad_Tickets = base.Columns["Cantidad Tickets"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
-                this.columnNombre = new global::System.Data.DataColumn("Nombre", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNombre);
-                this.columnCreacion = new global::System.Data.DataColumn("Creacion", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCreacion);
-                this.columnUsuario_solicita = new global::System.Data.DataColumn("Usuario solicita", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnUsuario_solicita);
-                this.columnTecnico = new global::System.Data.DataColumn("Tecnico", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTecnico);
-                this.columnTipo = new global::System.Data.DataColumn("Tipo", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTipo);
-                this.columnPrioridad = new global::System.Data.DataColumn("Prioridad", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPrioridad);
-                this.columnEstado = new global::System.Data.DataColumn("Estado", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnEstado);
-                this.columnNombre.MaxLength = 200;
-                this.columnCreacion.ReadOnly = true;
-                this.columnUsuario_solicita.AllowDBNull = false;
-                this.columnUsuario_solicita.MaxLength = 50;
-                this.columnTecnico.AllowDBNull = false;
-                this.columnTecnico.MaxLength = 15;
-                this.columnTipo.AllowDBNull = false;
-                this.columnTipo.MaxLength = 15;
-                this.columnPrioridad.AllowDBNull = false;
-                this.columnPrioridad.MaxLength = 15;
-                this.columnEstado.AllowDBNull = false;
-                this.columnEstado.MaxLength = 15;
+                this.columnMes = new global::System.Data.DataColumn("Mes", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMes);
+                this.columnCantidad_Tickets = new global::System.Data.DataColumn("Cantidad Tickets", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCantidad_Tickets);
+                this.columnMes.MaxLength = 30;
+                this.ExtendedProperties.Add("Generator_TablePropName", "_TicketsPorMes");
+                this.ExtendedProperties.Add("Generator_UserTableName", "TicketsPorMes");
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ListaTicketsActivosRow NewListaTicketsActivosRow() {
-                return ((ListaTicketsActivosRow)(this.NewRow()));
+            public TicketsPorMesRow NewTicketsPorMesRow() {
+                return ((TicketsPorMesRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new ListaTicketsActivosRow(builder);
+                return new TicketsPorMesRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(ListaTicketsActivosRow);
+                return typeof(TicketsPorMesRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.ListaTicketsActivosRowChanged != null)) {
-                    this.ListaTicketsActivosRowChanged(this, new ListaTicketsActivosRowChangeEvent(((ListaTicketsActivosRow)(e.Row)), e.Action));
+                if ((this.TicketsPorMesRowChanged != null)) {
+                    this.TicketsPorMesRowChanged(this, new TicketsPorMesRowChangeEvent(((TicketsPorMesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -522,8 +443,8 @@ namespace Interfaz {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.ListaTicketsActivosRowChanging != null)) {
-                    this.ListaTicketsActivosRowChanging(this, new ListaTicketsActivosRowChangeEvent(((ListaTicketsActivosRow)(e.Row)), e.Action));
+                if ((this.TicketsPorMesRowChanging != null)) {
+                    this.TicketsPorMesRowChanging(this, new TicketsPorMesRowChangeEvent(((TicketsPorMesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -531,8 +452,8 @@ namespace Interfaz {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.ListaTicketsActivosRowDeleted != null)) {
-                    this.ListaTicketsActivosRowDeleted(this, new ListaTicketsActivosRowChangeEvent(((ListaTicketsActivosRow)(e.Row)), e.Action));
+                if ((this.TicketsPorMesRowDeleted != null)) {
+                    this.TicketsPorMesRowDeleted(this, new TicketsPorMesRowChangeEvent(((TicketsPorMesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -540,14 +461,14 @@ namespace Interfaz {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.ListaTicketsActivosRowDeleting != null)) {
-                    this.ListaTicketsActivosRowDeleting(this, new ListaTicketsActivosRowChangeEvent(((ListaTicketsActivosRow)(e.Row)), e.Action));
+                if ((this.TicketsPorMesRowDeleting != null)) {
+                    this.TicketsPorMesRowDeleting(this, new TicketsPorMesRowChangeEvent(((TicketsPorMesRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemoveListaTicketsActivosRow(ListaTicketsActivosRow row) {
+            public void RemoveTicketsPorMesRow(TicketsPorMesRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -556,7 +477,7 @@ namespace Interfaz {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                TicketsActivos ds = new TicketsActivos();
+                TicketsPorMes ds = new TicketsPorMes();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -574,7 +495,7 @@ namespace Interfaz {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "ListaTicketsActivosDataTable";
+                attribute2.FixedValue = "TicketsPorMesDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -618,126 +539,71 @@ namespace Interfaz {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class ListaTicketsActivosRow : global::System.Data.DataRow {
+        public partial class TicketsPorMesRow : global::System.Data.DataRow {
             
-            private ListaTicketsActivosDataTable tableListaTicketsActivos;
+            private TicketsPorMesDataTable tableTicketsPorMes;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal ListaTicketsActivosRow(global::System.Data.DataRowBuilder rb) : 
+            internal TicketsPorMesRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableListaTicketsActivos = ((ListaTicketsActivosDataTable)(this.Table));
+                this.tableTicketsPorMes = ((TicketsPorMesDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Nombre {
+            public string Mes {
                 get {
                     try {
-                        return ((string)(this[this.tableListaTicketsActivos.NombreColumn]));
+                        return ((string)(this[this.tableTicketsPorMes.MesColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Nombre\' de la tabla \'ListaTicketsActivos\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Mes\' de la tabla \'TicketsPorMes\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableListaTicketsActivos.NombreColumn] = value;
+                    this[this.tableTicketsPorMes.MesColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public System.DateTime Creacion {
+            public int Cantidad_Tickets {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableListaTicketsActivos.CreacionColumn]));
+                        return ((int)(this[this.tableTicketsPorMes.Cantidad_TicketsColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Creacion\' de la tabla \'ListaTicketsActivos\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Cantidad Tickets\' de la tabla \'TicketsPorMes\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableListaTicketsActivos.CreacionColumn] = value;
+                    this[this.tableTicketsPorMes.Cantidad_TicketsColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Usuario_solicita {
-                get {
-                    return ((string)(this[this.tableListaTicketsActivos.Usuario_solicitaColumn]));
-                }
-                set {
-                    this[this.tableListaTicketsActivos.Usuario_solicitaColumn] = value;
-                }
+            public bool IsMesNull() {
+                return this.IsNull(this.tableTicketsPorMes.MesColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Tecnico {
-                get {
-                    return ((string)(this[this.tableListaTicketsActivos.TecnicoColumn]));
-                }
-                set {
-                    this[this.tableListaTicketsActivos.TecnicoColumn] = value;
-                }
+            public void SetMesNull() {
+                this[this.tableTicketsPorMes.MesColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Tipo {
-                get {
-                    return ((string)(this[this.tableListaTicketsActivos.TipoColumn]));
-                }
-                set {
-                    this[this.tableListaTicketsActivos.TipoColumn] = value;
-                }
+            public bool IsCantidad_TicketsNull() {
+                return this.IsNull(this.tableTicketsPorMes.Cantidad_TicketsColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Prioridad {
-                get {
-                    return ((string)(this[this.tableListaTicketsActivos.PrioridadColumn]));
-                }
-                set {
-                    this[this.tableListaTicketsActivos.PrioridadColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Estado {
-                get {
-                    return ((string)(this[this.tableListaTicketsActivos.EstadoColumn]));
-                }
-                set {
-                    this[this.tableListaTicketsActivos.EstadoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsNombreNull() {
-                return this.IsNull(this.tableListaTicketsActivos.NombreColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetNombreNull() {
-                this[this.tableListaTicketsActivos.NombreColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsCreacionNull() {
-                return this.IsNull(this.tableListaTicketsActivos.CreacionColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetCreacionNull() {
-                this[this.tableListaTicketsActivos.CreacionColumn] = global::System.Convert.DBNull;
+            public void SetCantidad_TicketsNull() {
+                this[this.tableTicketsPorMes.Cantidad_TicketsColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -745,22 +611,22 @@ namespace Interfaz {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class ListaTicketsActivosRowChangeEvent : global::System.EventArgs {
+        public class TicketsPorMesRowChangeEvent : global::System.EventArgs {
             
-            private ListaTicketsActivosRow eventRow;
+            private TicketsPorMesRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ListaTicketsActivosRowChangeEvent(ListaTicketsActivosRow row, global::System.Data.DataRowAction action) {
+            public TicketsPorMesRowChangeEvent(TicketsPorMesRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ListaTicketsActivosRow Row {
+            public TicketsPorMesRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -776,7 +642,7 @@ namespace Interfaz {
         }
     }
 }
-namespace Interfaz.TicketsActivosTableAdapters {
+namespace Interfaz.TicketsPorMesTableAdapters {
     
     
     /// <summary>
@@ -788,7 +654,7 @@ namespace Interfaz.TicketsActivosTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class ListaTicketsActivosTableAdapter : global::System.ComponentModel.Component {
+    public partial class TicketsPorMesTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -802,7 +668,7 @@ namespace Interfaz.TicketsActivosTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public ListaTicketsActivosTableAdapter() {
+        public TicketsPorMesTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -899,14 +765,9 @@ namespace Interfaz.TicketsActivosTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "ListaTicketsActivos";
-            tableMapping.ColumnMappings.Add("Nombre", "Nombre");
-            tableMapping.ColumnMappings.Add("Creacion", "Creacion");
-            tableMapping.ColumnMappings.Add("Usuario solicita", "Usuario solicita");
-            tableMapping.ColumnMappings.Add("Tecnico", "Tecnico");
-            tableMapping.ColumnMappings.Add("Tipo", "Tipo");
-            tableMapping.ColumnMappings.Add("Prioridad", "Prioridad");
-            tableMapping.ColumnMappings.Add("Estado", "Estado");
+            tableMapping.DataSetTable = "TicketsPorMes";
+            tableMapping.ColumnMappings.Add("Mes", "Mes");
+            tableMapping.ColumnMappings.Add("Cantidad Tickets", "Cantidad Tickets");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -923,8 +784,7 @@ namespace Interfaz.TicketsActivosTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Nombre, Creacion, [Usuario solicita], Tecnico, Tipo, Prioridad, Estado FRO" +
-                "M dbo.ListaTicketsActivos";
+            this._commandCollection[0].CommandText = "SELECT Mes, [Cantidad Tickets] FROM dbo.TicketsPorMes";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -932,7 +792,7 @@ namespace Interfaz.TicketsActivosTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(TicketsActivos.ListaTicketsActivosDataTable dataTable) {
+        public virtual int Fill(TicketsPorMes.TicketsPorMesDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -945,9 +805,9 @@ namespace Interfaz.TicketsActivosTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual TicketsActivos.ListaTicketsActivosDataTable GetData() {
+        public virtual TicketsPorMes.TicketsPorMesDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            TicketsActivos.ListaTicketsActivosDataTable dataTable = new TicketsActivos.ListaTicketsActivosDataTable();
+            TicketsPorMes.TicketsPorMesDataTable dataTable = new TicketsPorMes.TicketsPorMesDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1021,7 +881,7 @@ namespace Interfaz.TicketsActivosTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateUpdatedRows(TicketsActivos dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(TicketsPorMes dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1031,7 +891,7 @@ namespace Interfaz.TicketsActivosTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateInsertedRows(TicketsActivos dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(TicketsPorMes dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1041,7 +901,7 @@ namespace Interfaz.TicketsActivosTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateDeletedRows(TicketsActivos dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(TicketsPorMes dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             return result;
         }
@@ -1075,7 +935,7 @@ namespace Interfaz.TicketsActivosTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public virtual int UpdateAll(TicketsActivos dataSet) {
+        public virtual int UpdateAll(TicketsPorMes dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

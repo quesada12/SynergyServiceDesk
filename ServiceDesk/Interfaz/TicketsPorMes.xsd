@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TicketsPorMes" targetNamespace="http://tempuri.org/TicketsPorMes.xsd" xmlns:mstns="http://tempuri.org/TicketsPorMes.xsd" xmlns="http://tempuri.org/TicketsPorMes.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConsultaUsuarios" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConsultaUsuarios (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Interfaz.Properties.Settings.GlobalReference.Default.ConsultaUsuarios" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TicketsPorMesTableAdapter" GeneratorDataComponentClassName="TicketsPorMesTableAdapter" Name="TicketsPorMes" UserDataComponentName="TicketsPorMesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConsultaUsuarios (Settings)" DbObjectName="SistemaTickets.dbo.TicketsPorMes" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Mes, [Cantidad Tickets] FROM dbo.TicketsPorMes</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Mes" DataSetColumn="Mes" />
+              <Mapping SourceColumn="Cantidad Tickets" DataSetColumn="Cantidad Tickets" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TicketsPorMes" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="TicketsPorMes" msprop:Generator_UserDSName="TicketsPorMes">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TicketsPorMes" msprop:Generator_TableClassName="TicketsPorMesDataTable" msprop:Generator_TableVarName="tableTicketsPorMes" msprop:Generator_TablePropName="_TicketsPorMes" msprop:Generator_RowDeletingName="TicketsPorMesRowDeleting" msprop:Generator_RowChangingName="TicketsPorMesRowChanging" msprop:Generator_RowEvHandlerName="TicketsPorMesRowChangeEventHandler" msprop:Generator_RowDeletedName="TicketsPorMesRowDeleted" msprop:Generator_UserTableName="TicketsPorMes" msprop:Generator_RowChangedName="TicketsPorMesRowChanged" msprop:Generator_RowEvArgName="TicketsPorMesRowChangeEvent" msprop:Generator_RowClassName="TicketsPorMesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Mes" msprop:Generator_ColumnVarNameInTable="columnMes" msprop:Generator_ColumnPropNameInRow="Mes" msprop:Generator_ColumnPropNameInTable="MesColumn" msprop:Generator_UserColumnName="Mes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Cantidad_x0020_Tickets" msprop:Generator_ColumnVarNameInTable="columnCantidad_Tickets" msprop:Generator_ColumnPropNameInRow="Cantidad_Tickets" msprop:Generator_ColumnPropNameInTable="Cantidad_TicketsColumn" msprop:Generator_UserColumnName="Cantidad Tickets" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
